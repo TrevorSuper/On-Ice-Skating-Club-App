@@ -1,1 +1,0 @@
-print("My first python code, I'm doing it mom")
