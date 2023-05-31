@@ -1,4 +1,4 @@
-import login_page
+import home_page
 
 # list of gui definitions
 # widgets = GUI elements: buttons, textboxes, labels, images
@@ -6,9 +6,12 @@ import login_page
 # label = an area widget that holds text and/or an image within a window
 # button = a well-defined area within the interface that is clicked to select a command
 # entry widget = textbox that accepts a single line of user input
+# grid = geometry manager that organizes events in a table-like structure in a parent widget
 
 def main(): 
-    login_page.user_login()
-    #end of main function
+    home_page.home_screen()
+    #login_page.user_login()
+    #login_page.admin_login()
+    #end of main
 
 main()
