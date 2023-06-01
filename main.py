@@ -10,8 +10,5 @@ import home_page
 
 def main(): 
     home_page.home_screen()
-    #login_page.user_login()
-    #login_page.admin_login()
-    #end of main
 
 main()
