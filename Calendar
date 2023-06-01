@@ -1,13 +1,29 @@
 # Test
-# Placemnt and sizing of textboxes
+# Placemnt and sizing and toggled editablilty of textboxes
 import tkinter as tk
+
+def addEvent():
+    text.config(state='normal')
+    text1.config(state='normal')
+
+def saveEvent():
+    text.config(state='disabled')
+    text1.config(state='disabled')
 
 root = tk.Tk()
 root.title("test")
 text = tk.Text(root, height=5, width=10)
 text1 = tk.Text(root, height=5, width=10)
+text.config(state='disabled')
+text1.config(state='disabled')
 
 text.grid(row=1, column=1)
 text1.grid(row=1, column=2)
+
+saveBtn = tk.Button(root, text="Save", command=saveEvent)
+saveBtn.grid(row=2, column=1)
+
+saveBtn = tk.Button(root, text="Add Event", command=addEvent)
+saveBtn.grid(row=2, column=2)
 
 root.mainloop()
