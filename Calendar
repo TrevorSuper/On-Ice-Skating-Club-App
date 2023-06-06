@@ -72,10 +72,10 @@ def saveEvent():
 
 
 root = tk.Tk()
-root.title("test")
+root.title("July 2023")
 
 # Labels for the month and days along with placemnt 
-month =tk.Label(root, text= "June 2023", height = 3, width=10)
+month =tk.Label(root, text= "June 2023", height = 3, width=10, font='bold')
 sunday = tk.Label(root, text = "Sunday",height = 2, width = 10)
 monday = tk.Label(root, text = "Monday",height = 2, width = 10)
 tuesday= tk.Label(root, text = "Tuesday",height = 2, width = 10)
@@ -84,7 +84,7 @@ thursday = tk.Label(root, text = "Thursday",height = 2, width = 10)
 friday = tk.Label(root, text = "Friday",height = 2, width = 10)
 saturday = tk.Label(root, text = "Saturday",height = 2, width = 10)
 
-month.grid(row=1,column=4)
+month.grid(row=1,column=3,columnspan=3, sticky='ew')
 sunday.grid(row=2, column=1)
 monday.grid(row=2, column=2)
 tuesday.grid(row=2, column=3)
