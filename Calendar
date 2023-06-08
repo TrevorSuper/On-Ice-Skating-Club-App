@@ -68,6 +68,8 @@ def saveEvent():
     text29.config(state='disabled')
     text30.config(state='disabled')
 
+def SignUp():
+    print("test")
 
 
 
@@ -305,5 +307,8 @@ saveBtn.grid(row=13, column=3)
 
 saveBtn = tk.Button(root, text="Add Event", command=addEvent)
 saveBtn.grid(row=13, column=5)
+
+# Bind it so that should a user click into the text box, it opens an event sign up window 
+text1.bind('<Double-Button-1>', SignUp)
 
 root.mainloop()
