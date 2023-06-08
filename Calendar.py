@@ -68,8 +68,18 @@ def saveEvent():
     text29.config(state='disabled')
     text30.config(state='disabled')
 
-def SignUp():
-    print("test")
+# Open a new window to sign up for the event
+def SignUp(event):
+    signUp_window = tk.Toplevel()
+    signUp_window.title("Sign Up For Event ?")
+    signUp_window.config(width=300, height=200)
+
+    button_close = tk.Button(
+        signUp_window,
+        text="Cancel",
+        command=signUp_window.destroy
+    )
+    button_close.grid(row= 10,column= 10)
 
 
 
