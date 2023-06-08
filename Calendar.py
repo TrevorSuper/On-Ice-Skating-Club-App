@@ -70,16 +70,25 @@ def saveEvent():
 
 # Open a new window to sign up for the event
 def SignUp(event):
-    signUp_window = tk.Toplevel()
-    signUp_window.title("Sign Up For Event ?")
-    signUp_window.config(width=300, height=200)
+    signUpWindow = tk.Toplevel()
+    signUpWindow.title("Sign Up For Event ?")
+    signUpWindow.config(width=300, height=200)
 
-    button_close = tk.Button(
-        signUp_window,
+    buttonCancel = tk.Button(
+        signUpWindow,
         text="Cancel",
-        command=signUp_window.destroy
+        command=signUpWindow.destroy
     )
-    button_close.grid(row= 10,column= 10)
+
+    buttonSignUp = tk.Button(
+        signUpWindow,
+        text="Yes",
+        command=signUpWindow.destroy
+    )
+
+    buttonCancel.grid(row= 10,column= 10)
+    buttonSignUp.grid(row= 10,column=11)
+    
 
 
 
