@@ -8,7 +8,7 @@ def admin_login():
     admin_login_window = Tk() #instantiate an instance of a window
     admin_login_window.geometry("1920x1080") #size of the window, chosing 
     admin_login_window.title("On Ice Skating Administrator Login") #title of the window screen
-    ShoeIcon = PhotoImage(file='Skating_Shoe_Icon.png') #converts the png to a usable image for the window icon and instantiates it as an object
+    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png') #converts the png to a usable image for the window icon and instantiates it as an object
     admin_login_window.iconphoto(True, ShoeIcon) #sets the object ShoeIcon as the window icon
     #window.config(background="") can set a color such as "blue" in quotation marks or use a hex value (with hashtag) to set the background a certain color, google hex color picker
     empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=0)
@@ -45,7 +45,7 @@ def user_login():
     user_login_window = Tk()
     user_login_window.geometry("1920x1080")
     user_login_window.title("User Login")
-    ShoeIcon = PhotoImage(file='Skating_Shoe_Icon.png')
+    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     user_login_window.iconphoto(True, ShoeIcon)
     empty_grid = Label(user_login_window,height=1,width=21).grid(row=0,column=0)
     empty_grid = Label(user_login_window,height=1,width=21).grid(row=0,column=1)
@@ -108,7 +108,7 @@ def user_login():
         recover_window = Tk()
         recover_window.geometry("1920x1080")
         recover_window.title("Reset Password")
-        ShoeIcon = PhotoImage(file='Skating_Shoe_Icon.png')
+        ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
         recover_window.iconphoto(True, ShoeIcon)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=0)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=1)
@@ -189,7 +189,7 @@ def register_new_user():
     register_window = Tk()
     register_window.geometry("1920x1080")
     register_window.title("Create New Account")
-    ShoeIcon = PhotoImage(file='Skating_Shoe_Icon.png')
+    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     register_window.iconphoto(True, ShoeIcon)
     empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=0)
     empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=1)

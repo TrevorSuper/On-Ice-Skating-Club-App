@@ -6,7 +6,7 @@ def home_screen():
     home_window = Tk()
     home_window.geometry("1920x1080")
     home_window.title("On Ice Skating")
-    ShoeIcon = PhotoImage(file='Skating_Shoe_Icon.png')
+    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     home_window.iconphoto(True, ShoeIcon)
     def open_user_login():
         home_window.destroy()
