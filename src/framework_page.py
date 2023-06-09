@@ -5,7 +5,7 @@ from tkinter import *
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"src\img")
+ASSETS_PATH = OUTPUT_PATH / Path(r"img")
 
 
 
@@ -76,7 +76,7 @@ def frame_gui(root):
     image=canvas.button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command= print("button_3 clicked"),
+    command= print("login button clicked"), # this automatically runs once when main.py is run and can't be clicked again
     relief="flat"
 )
 

@@ -3,11 +3,11 @@ from tkinter import Tk, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"src\img")
+ASSETS_PATH = OUTPUT_PATH / Path(r"img")
 from pathlib import Path
 from tkinter import Canvas, Button, PhotoImage
 
-
+# text in some of the buttons needs resizing later down the road
 
 
 def relative_to_assets(path: str) -> Path:
