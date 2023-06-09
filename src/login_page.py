@@ -81,7 +81,7 @@ def user_login():
             messagebox.showerror('Error','Please enter an email and password.')
         else:
             try:
-                con=pymysql.connect(host='localhost',user='root',password='legacyserverwhen') #change user and password to what it is set on your machine
+                con=pymysql.connect(host='localhost',user='root',password='legacyserverwhen')
                 mycursor=con.cursor()
             except:
                 messagebox.showerror('Error','Unable To Connect To Database.')
@@ -157,7 +157,8 @@ def user_login():
         recover_pw_dropdown = OptionMenu(recover_window,recover_pw_dropdown,*answer_recover_pw_questions)
         recover_pw_dropdown.grid(row=4,column=5)
         def reset_password():
-            print('password has been reset')
+            if recover_email_entry.get()=='' or answer_recover_q_entry.get()=='':
+                messagebox.showerror('Error','All fields are required')
         reset_password_button = Button(recover_window,text='Reset Password',font=('Arial',12),command=reset_password).grid(row=7,column=4,columnspan=2)
 
     forgot_password_label = Label(user_login_window,text='Forgot Password?',font=('Arial',12)).grid(row=8,column=4,columnspan=2)
@@ -214,37 +215,35 @@ def register_new_user():
     empty_grid = Label(register_window,height=1,width=21).grid(row=11,column=0)
     empty_grid = Label(register_window,height=1,width=21).grid(row=12,column=0)
     empty_grid = Label(register_window,height=1,width=21).grid(row=13,column=0)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=14,column=0)
     create_new_account_title_label = Label(register_window,text='Create New Account',font=('Arial Bold',18)).grid(row=1,column=4,rowspan=2,columnspan=2)
-    email_label = Label(register_window,text="Email:",font=("Arial",12)).grid(row=3,column=4)
+    email_label = Label(register_window,text="Email:",font=("Arial",12)).grid(row=3,column=3)
     email_entry = Entry(register_window,font=("Arial",12))
-    email_entry.grid(row=3,column=5)
-    confirm_email_label = Label(register_window,text="Confirm Email:",font=('Arial',12)).grid(row=4,column=4)
+    email_entry.grid(row=3,column=4)
+    confirm_email_label = Label(register_window,text="Confirm Email:",font=('Arial',12)).grid(row=4,column=3)
     confirm_email_entry = Entry(register_window,font=("Arial",12))
-    confirm_email_entry.grid(row=4,column=5)
-    user_pw_label = Label(register_window,text="Password:",font=("Arial",12)).grid(row=5,column=4)
+    confirm_email_entry.grid(row=4,column=4)
+    user_pw_label = Label(register_window,text="Password:",font=("Arial",12)).grid(row=5,column=3)
     user_pw_entry = Entry(register_window,font=("Arial",12),show="*")
-    user_pw_entry.grid(row=5,column=5)
-    user_confirm_pw_label = Label(register_window,text="Confirm Password:",font=("Arial",12)).grid(row=6,column=4)
+    user_pw_entry.grid(row=5,column=4)
+    user_confirm_pw_label = Label(register_window,text="Confirm Password:",font=("Arial",12)).grid(row=6,column=3)
     user_confirm_pw_entry = Entry(register_window,font=("Arial",12),show="*")
-    user_confirm_pw_entry.grid(row=6,column=5)
-
-    set_recover_pw_questions = [
-    "What street did you grow up on?",
-    "What high school did you go to?",
-    "What was the make and model of your first car?",
-    "In what city or town did your parents meet?"
-    ]
-    recover_pw_dropdown = StringVar()
-    recover_pw_dropdown = OptionMenu(register_window,recover_pw_dropdown,*set_recover_pw_questions)
-    recover_pw_dropdown.grid(row=7,column=5)
-    recover_pw_label = Label(register_window,text="Recovery Question:",font=("Arial",12)).grid(row=7,column=4)
-    recover_answer_label = Label(register_window,text='Recovery Answer:',font=('Arial',12)).grid(row=8,column=4)
+    user_confirm_pw_entry.grid(row=6,column=4)
+    recover_question_instructions = Label(register_window,font=("Arial",12),text='Enter a security question\nexactly as it appears from the\nfollowing list of questions.').grid(row=3,column=5,rowspan=3,columnspan=2)
+    #recover_question1 = Entry(register_window,font=('Arial',12),text="What street did you grow up on?").grid(row=6,column=5)
+    #"What high school did you go to?",
+    #"What was the make and model of your first car?",
+    #"In what city or town did your parents meet?"
+    recover_question_label = Label(register_window,text="Security Question:",font=("Arial",12)).grid(row=7,column=3)
+    recover_question_entry = Entry(register_window,font=('Arial',12))
+    recover_question_entry.grid(row=7,column=4)
+    recover_answer_label = Label(register_window,text='Security Answer:',font=('Arial',12)).grid(row=8,column=3)
     recover_answer_entry = Entry(register_window,font=('Arial',12))
-    recover_answer_entry.grid(row=8,column=5)
+    recover_answer_entry.grid(row=8,column=4)
     
     def create_account():
-        if email_entry.get()=='' or user_pw_entry.get()=='' or user_confirm_pw_entry.get()=='':
-            messagebox.showerror('Error','Please enter an email and password.')
+        if email_entry.get()=='' or confirm_email_entry.get()==''  or user_pw_entry.get()=='' or user_confirm_pw_entry.get()=='' or recover_answer_entry.get()=='':
+            messagebox.showerror('Error','All fields are required')
             #end
         elif email_entry.get()!=confirm_email_entry.get():
             messagebox.showerror('Error','Email Mismatch')
@@ -253,7 +252,7 @@ def register_new_user():
             #end
         else:
             try:
-                con=pymysql.connect(host='localhost',user='root',password='legacyserverwhen') #change user and password to what it is set on your machine
+                con=pymysql.connect(host='localhost',user='root',password='legacyserverwhen')
                 mycursor=con.cursor()
                 #end
             except:
@@ -284,13 +283,13 @@ def register_new_user():
                 open_login()
                 #end
 
-    create_account_button = Button(register_window,text='Create Account',font=("Arial",12),command=create_account).grid(row=10,column=4,columnspan=2)
+    create_account_button = Button(register_window,text='Create Account',font=("Arial",12),command=create_account).grid(row=11,column=4,columnspan=2)
     def open_login():
         register_window.destroy()
         user_login()
         #end
-    have_an_account_label = Label(register_window,text='Have an Account?',font=('Arial',12)).grid(row=12,column=4,columnspan=2)
-    open_login_button = Button(register_window,text='Login',font=("Arial",12),command=open_login).grid(row=13,column=4,columnspan=2)
+    have_an_account_label = Label(register_window,text='Have an Account?',font=('Arial',12)).grid(row=13,column=4,columnspan=2)
+    open_login_button = Button(register_window,text='Login',font=("Arial",12),command=open_login).grid(row=14,column=4,columnspan=2)
     def return_home():
         register_window.destroy()
         home_page.home_screen()

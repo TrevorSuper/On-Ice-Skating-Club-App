@@ -263,4 +263,3 @@ def frame_gui(root):
     canvas.pack()  # Add this line to pack the canvas widget
 
     return canvas
-
