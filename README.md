@@ -21,14 +21,17 @@ Upcoming system features:<br>
    -Clear details provided on when payment is due<br>
    -Prevent a user from registering for an event that is full, expired, or cancelled<br>
 4. Service Pages<br>
-   -Unique web pages for each of the following service providing relevent details<br>
+   -Unique desktop windows for each of the following services providing relevent details<br>
       -Hockey Games<br>
       -Skating Lessons<br>
-      -Open Ice<br>
+      -Open Skate<br>
       -Theater on Ice<br>
       -Figure Skating<br>
-5. Skate club membership<br>
+      -Meet The Team<br>
+      -Amenities<br>
+      -About/Community<br>
+5. Skate Club Membership<br>
    -Users can apply, change, and cancel club membership<br>
    -Two different options for club membership<br>
-      -Automaticaly renewing subscription charged per month<br>
-      -Automatically renweing subscription charged per year
+   -Automatically renewing subscription charged per month<br>
+   -Automatically renweing subscription charged per year
