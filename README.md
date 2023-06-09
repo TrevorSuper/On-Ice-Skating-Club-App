@@ -20,8 +20,7 @@ Upcoming system features:<br>
    -Users receive confirmation after registering<br>
    -Clear details provided on when payment is due<br>
    -Prevent a user from registering for an event that is full, expired, or cancelled<br>
-4. Service Pages<br>
-   -Unique desktop windows for each of the following services providing relevent details<br>
+4. -Unique desktop windows for each of the following services providing relevent details<br>
       -Hockey Games<br>
       -Skating Lessons<br>
       -Open Skate<br>
