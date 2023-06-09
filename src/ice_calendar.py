@@ -93,7 +93,7 @@ def SignUp(event):
 
 
 root = tk.Tk()
-root.title("July 2023")
+root.title("June 2023")
 
 # Labels for the month and days along with placemnt 
 month =tk.Label(root, text= "June 2023", height = 3, width=10, font='bold')
