@@ -86,7 +86,7 @@ def user_login():
             except:
                 messagebox.showerror('Error','Unable To Connect To Database.')
                 return
-            query='use userdata'
+            query='use userdata004'
             mycursor.execute(query)
             query='select * from data where email=%s and password=%s'
             mycursor.execute(query,(email_entry.get(),user_pw_entry.get()))
@@ -143,8 +143,8 @@ def user_login():
             recover_window.destroy()
             user_login()
         recover_to_login_button = Button(recover_window,text='Previous Page',width='13',command=recover_to_login,font=('Arial',12)).grid(row=0,column=0)
-        choose_recover_q_label = Label(recover_window,text='Choose Recovery Question:',font=('Arial',12)).grid(row=4,column=4)
-        answer_recover_q_label = Label(recover_window,text='Answer Recovery Question:',font=('Arial',12)).grid(row=5,column=4)
+        choose_recover_q_label = Label(recover_window,text='Security Question:',font=('Arial',12)).grid(row=4,column=4)
+        answer_recover_q_label = Label(recover_window,text='Security Answer:',font=('Arial',12)).grid(row=5,column=4)
         answer_recover_q_entry = Entry(recover_window,font=('Arial',12))
         answer_recover_q_entry.grid(row=5,column=5)
         answer_recover_pw_questions = [
@@ -217,32 +217,30 @@ def register_new_user():
     empty_grid = Label(register_window,height=1,width=21).grid(row=13,column=0)
     empty_grid = Label(register_window,height=1,width=21).grid(row=14,column=0)
     create_new_account_title_label = Label(register_window,text='Create New Account',font=('Arial Bold',18)).grid(row=1,column=4,rowspan=2,columnspan=2)
-    email_label = Label(register_window,text="Email:",font=("Arial",12)).grid(row=3,column=3)
+    email_label = Label(register_window,text="Email:",font=("Arial",12)).grid(row=3,column=4)
     email_entry = Entry(register_window,font=("Arial",12))
-    email_entry.grid(row=3,column=4)
-    confirm_email_label = Label(register_window,text="Confirm Email:",font=('Arial',12)).grid(row=4,column=3)
+    email_entry.grid(row=3,column=5)
+    confirm_email_label = Label(register_window,text="Confirm Email:",font=('Arial',12)).grid(row=4,column=4)
     confirm_email_entry = Entry(register_window,font=("Arial",12))
-    confirm_email_entry.grid(row=4,column=4)
-    user_pw_label = Label(register_window,text="Password:",font=("Arial",12)).grid(row=5,column=3)
+    confirm_email_entry.grid(row=4,column=5)
+    user_pw_label = Label(register_window,text="Password:",font=("Arial",12)).grid(row=5,column=4)
     user_pw_entry = Entry(register_window,font=("Arial",12),show="*")
-    user_pw_entry.grid(row=5,column=4)
-    user_confirm_pw_label = Label(register_window,text="Confirm Password:",font=("Arial",12)).grid(row=6,column=3)
+    user_pw_entry.grid(row=5,column=5)
+    user_confirm_pw_label = Label(register_window,text="Confirm Password:",font=("Arial",12)).grid(row=6,column=4)
     user_confirm_pw_entry = Entry(register_window,font=("Arial",12),show="*")
-    user_confirm_pw_entry.grid(row=6,column=4)
-    recover_question_instructions = Label(register_window,font=("Arial",12),text='Enter a security question\nexactly as it appears from the\nfollowing list of questions.').grid(row=3,column=5,rowspan=3,columnspan=2)
-    #recover_question1 = Entry(register_window,font=('Arial',12),text="What street did you grow up on?").grid(row=6,column=5)
-    #"What high school did you go to?",
-    #"What was the make and model of your first car?",
-    #"In what city or town did your parents meet?"
-    recover_question_label = Label(register_window,text="Security Question:",font=("Arial",12)).grid(row=7,column=3)
-    recover_question_entry = Entry(register_window,font=('Arial',12))
-    recover_question_entry.grid(row=7,column=4)
-    recover_answer_label = Label(register_window,text='Security Answer:',font=('Arial',12)).grid(row=8,column=3)
+    user_confirm_pw_entry.grid(row=6,column=5)
+    var_1 = StringVar()
+    recover_pw_dropdown = OptionMenu(register_window,var_1,"What street did you grow up on?","What high school did you go to?","What was the make and model of your first car?","In what city or town did your parents meet?")
+    recover_pw_dropdown.grid(row=7,column=5)
+    security_question = Entry(register_window,font=("Arial",12),width=37,textvariable=var_1,state='readonly')
+    security_question.place(x=4000,y=5000)
+    recover_question_label = Label(register_window,text="Security Question:",font=("Arial",12)).grid(row=7,column=4)
+    recover_answer_label = Label(register_window,text='Security Answer:',font=('Arial',12)).grid(row=8,column=4)
     recover_answer_entry = Entry(register_window,font=('Arial',12))
-    recover_answer_entry.grid(row=8,column=4)
+    recover_answer_entry.grid(row=8,column=5)
     
     def create_account():
-        if email_entry.get()=='' or confirm_email_entry.get()==''  or user_pw_entry.get()=='' or user_confirm_pw_entry.get()=='' or recover_answer_entry.get()=='':
+        if email_entry.get()=='' or confirm_email_entry.get()==''  or user_pw_entry.get()=='' or user_confirm_pw_entry.get()=='' or security_question.get()=='' or recover_answer_entry.get()=='':
             messagebox.showerror('Error','All fields are required')
             #end
         elif email_entry.get()!=confirm_email_entry.get():
@@ -260,22 +258,22 @@ def register_new_user():
                 return
                 #end
             try:
-                query='create database userdata'
+                query='create database userdata004'
                 mycursor.execute(query)
-                query='use userdata'
+                query='use userdata004'
                 mycursor.execute(query)
-                query='create table data(id int auto_increment primary key not null,email varchar(50),password varchar(20))'
+                query='create table data(id int auto_increment primary key not null,email varchar(50),password varchar(20),security_question varchar(50),security_answer varchar(85))'
                 mycursor.execute(query)
             except:
-                mycursor.execute('use userdata')
+                mycursor.execute('use userdata004')
             query='select * from data where email=%s'
             mycursor.execute(query,(email_entry.get()))
             row=mycursor.fetchone()
             if row !=None:
                 messagebox.showerror('Error','An account with this email already exists, please use another email.')
             else:
-                query='insert into data(email,password) values(%s,%s)'
-                mycursor.execute(query,(email_entry.get(),user_pw_entry.get()))
+                query='insert into data(email,password,security_question,security_answer) values(%s,%s,%s,%s)'
+                mycursor.execute(query,(email_entry.get(),user_pw_entry.get(),security_question.get(),recover_answer_entry.get()))
                 con.commit()
                 con.close()
                 messagebox.showinfo('Success','Account Created')

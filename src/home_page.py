@@ -3,7 +3,7 @@ from tkinter import *
 def home_screen():
     home_window = Tk()
     home_window.geometry("1920x1080")
-    home_window.title("On Ice Skating")
+    home_window.title("On Ice Skating v0.00.0007")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     home_window.iconphoto(True, ShoeIcon)
     def open_user_login():
