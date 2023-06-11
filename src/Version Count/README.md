@@ -13,4 +13,6 @@ v0.00.0005<br>
 v0.00.0006<br>
 -First version of custom UI<br>
 v0.00.0007<br>
--Added Security Questions and Answers to MySQL database
+-Users are now required to provide a security question and answer upon creating an account<br>
+v0.00.0008<br>
+-Users can now update their password using their security question and answer

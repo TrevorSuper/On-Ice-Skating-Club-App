@@ -95,6 +95,7 @@ def user_login():
                 messagebox.showerror('Error','Invalid email or password.')
             else:
                 messagebox.showinfo('Success','Login Successful')
+                con.close()
                 global emailEntry
                 emailEntry = email_entry.get()
                 user_login_window.destroy()
@@ -107,15 +108,15 @@ def user_login():
         user_login_window.destroy()
         recover_window = Tk()
         recover_window.geometry("1920x1080")
-        recover_window.title("Reset Password")
+        recover_window.title("Change Password")
         ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
         recover_window.iconphoto(True, ShoeIcon)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=0)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=1)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=2)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=3)
-        empty_grid = Label(recover_window,height=1,width=21,background='red').grid(row=0,column=4)
-        empty_grid = Label(recover_window,height=1,width=21,background='blue').grid(row=0,column=5)
+        empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=4)
+        empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=5)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=6)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=7)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=0,column=8)
@@ -129,11 +130,6 @@ def user_login():
         empty_grid = Label(recover_window,height=1,width=21).grid(row=7,column=0)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=8,column=0)
         empty_grid = Label(recover_window,height=1,width=21).grid(row=9,column=0)
-        empty_grid = Label(recover_window,height=1,width=21).grid(row=10,column=0)
-        empty_grid = Label(recover_window,height=1,width=21).grid(row=11,column=0)
-        empty_grid = Label(recover_window,height=1,width=21).grid(row=12,column=0)
-        empty_grid = Label(recover_window,height=1,width=21).grid(row=13,column=0)
-        empty_grid = Label(recover_window,height=1,width=21).grid(row=14,column=0)
         reset_password_label = Label(recover_window,text='Reset Password',font=("Arial Bold",18)).grid(row=1,column=4,rowspan=2,columnspan=2)
         recover_email_label = Label(recover_window,text='Email:',font=('Arial',12)).grid(row=3,column=4)
         recover_email_entry = Entry(recover_window,text='Email',font=('Arial',12))
@@ -143,26 +139,107 @@ def user_login():
             recover_window.destroy()
             user_login()
         recover_to_login_button = Button(recover_window,text='Previous Page',width='13',command=recover_to_login,font=('Arial',12)).grid(row=0,column=0)
-        choose_recover_q_label = Label(recover_window,text='Security Question:',font=('Arial',12)).grid(row=4,column=4)
-        answer_recover_q_label = Label(recover_window,text='Security Answer:',font=('Arial',12)).grid(row=5,column=4)
-        answer_recover_q_entry = Entry(recover_window,font=('Arial',12))
-        answer_recover_q_entry.grid(row=5,column=5)
-        answer_recover_pw_questions = [
-        "What street did you grow up on?",
-        "What high school did you go to?",
-        "What was the make and model of your first car?",
-        "In what city or town did your parents meet?"
-        ]
-        recover_pw_dropdown = StringVar()
-        recover_pw_dropdown = OptionMenu(recover_window,recover_pw_dropdown,*answer_recover_pw_questions)
-        recover_pw_dropdown.grid(row=4,column=5)
-        def reset_password():
-            if recover_email_entry.get()=='' or answer_recover_q_entry.get()=='':
-                messagebox.showerror('Error','All fields are required')
-        reset_password_button = Button(recover_window,text='Reset Password',font=('Arial',12),command=reset_password).grid(row=7,column=4,columnspan=2)
+        def continue_with_account_recovery():
+            if recover_email_entry.get()=='':
+                messagebox.showerror('Error','Enter an email address to continue with account recovery')
+            else:
+                con = pymysql.connect(host='localhost',user='root',password='legacyserverwhen',database='userdata004')
+                mycursor = con.cursor()
+                query = 'select * from data where email=%s'
+                mycursor.execute(query,(recover_email_entry.get()))
+                row1=mycursor.fetchone()
+                query = 'select email from data where email=%s'
+                mycursor.execute(query,(recover_email_entry.get()))
+                email_pull = []
+                for i in mycursor.fetchone():
+                    email_pull.append(i[0])
+                query = 'select security_question from data where email=%s'
+                mycursor.execute(query,(recover_email_entry.get()))
+                security_question_pull = []
+                for j in mycursor.fetchone():
+                    security_question_pull.append(j[0])
+                query = 'select security_answer from data where email=%s'
+                mycursor.execute(query,(recover_email_entry.get()))
+                security_answer_pull = []
+                for k in mycursor.fetchone():
+                    security_answer_pull.append(k[0])
+                if row1==None:
+                    messagebox.showerror('Error','There is no account registered with this email')
+                else:
+                    recover_window.destroy()
+                    reset_window = Tk()
+                    reset_window.geometry("1920x1080")
+                    reset_window.title("Change Password")
+                    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
+                    reset_window.iconphoto(True, ShoeIcon)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=1)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=2)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=3)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=4)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=5)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=6)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=7)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=8)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=0,column=9)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=1,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=2,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=3,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=4,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=5,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=6,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=7,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=8,column=0)
+                    empty_grid = Label(reset_window,height=1,width=21).grid(row=9,column=0)
+                    var_2 = StringVar(reset_window,i)
+                    var_3 = StringVar(reset_window,j)
+                    var_4 = StringVar(reset_window,k)
+                    reset_password_label = Label(reset_window,text='Answer Security Question',font=("Arial Bold",18)).grid(row=1,column=4,rowspan=2,columnspan=2)
+                    reset_email_label = Label(reset_window,text='Email:',font=('Arial',12)).grid(row=3,column=4)
+                    reset_email_specific = Entry(reset_window,textvariable=var_2,font=('Arial',12),state='readonly',width=42)
+                    reset_email_specific.grid(row=3,column=5,columnspan=2)
+                    security_question_text = Label(reset_window,text='Security Question:',font=('Arial',12)).grid(row=4,column=4)
+                    show_security_question = Entry(reset_window,textvariable=var_3,font=('Arial',12),state='readonly',width=42)
+                    show_security_question.grid(row=4,column=5,columnspan=2)
+                    security_answer_text = Label(reset_window,text='Security Answer:',font=('Arial',12)).grid(row=5,column=4)
+                    enter_security_answer = Entry(reset_window,font=('Arial',12),width=42)
+                    enter_security_answer.grid(row=5,column=5,columnspan=2)
+                    ask_new_password = Label(reset_window,text='New Password:',font=('Arial',12)).grid(row=6,column=4)
+                    enter_new_password = Entry(reset_window,font=('Arial',12),width=42)
+                    enter_new_password.grid(row=6,column=5,columnspan=2)
+                    ask_confirmation = Label(reset_window,text='Confirm New Password:',font=('Arial',12)).grid(row=7,column=4)
+                    confirm_new_password = Entry(reset_window,font=('Arial',12),width=42)
+                    confirm_new_password.grid(row=7,column=5,columnspan=2)
+                    mysql_security_answer = Entry(reset_window,textvariable=var_4,font=('Arial',12),state='readonly')
+                    mysql_security_answer.place(x=4000,y=5000)
+                    con.close()
+                    def reset_password():
+                        if enter_security_answer.get()=='' or enter_new_password.get()=='' or confirm_new_password.get()=='':
+                            messagebox.showerror('Error','All fields are required')
+                        elif enter_new_password.get() != confirm_new_password.get():
+                            messagebox.showerror('Error','Password Mismatch')
+                        else:
+                            con = pymysql.connect(host='localhost',user='root',password='legacyserverwhen',database='userdata004')
+                            mycursor = con.cursor()
+                            if mysql_security_answer.get() != enter_security_answer.get():
+                                messagebox.showerror('Error','Security Answer is incorrect')
+                            elif mysql_security_answer.get() == enter_security_answer.get():
+                                query = 'update data set password=%s where email=%s'
+                                mycursor.execute(query,(enter_new_password.get(),reset_email_specific.get()))
+                                con.commit()
+                                con.close()
+                                messagebox.showinfo('Success','Password has been updated')
+                                reset_to_login()
+                    update_password_button = Button(reset_window,text='Update Password',font=('Arial',12),command=reset_password).grid(row=9,column=4,columnspan=2)
+                    def reset_to_login():
+                        reset_window.destroy()
+                        user_login()
+                    reset_to_login_button = Button(reset_window,text='Return to login',font=('Arial',12),command=reset_to_login).grid(row=0,column=0)
+            
+        continue_button = Button(recover_window,text='Continue with Account Recovery',font=('Arial',12),command=continue_with_account_recovery).grid(row=7,column=4,columnspan=2)
 
     forgot_password_label = Label(user_login_window,text='Forgot Password?',font=('Arial',12)).grid(row=8,column=4,columnspan=2)
-    forgot_password_button = Button(user_login_window,text='Reset Password',command=forgot_password,font=('Arial',12)).grid(row=9,column=4,columnspan=2)
+    forgot_password_button = Button(user_login_window,text='Change Password',command=forgot_password,font=('Arial',12)).grid(row=9,column=4,columnspan=2)
     no_account = Label(user_login_window,text = "Don't have an Account?",font=('Arial',12)).grid(row=11,column=4,columnspan=2)
     def open_register():
         user_login_window.destroy()
