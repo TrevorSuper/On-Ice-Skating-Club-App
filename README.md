@@ -1,10 +1,4 @@
 # On Ice Skating Club App
-CSI 2999 Sophomore Project<br>
-Group 5<br>
-Team Name: Later Skaters<br>
-Intended Project: Skating Club App<br>
-Team Leader: Trevor Super<br>
-Team Members: Christina Summa, Linda Tir, Kevin Tripi<br>
 Upcoming system features:<br>
 1. User Account Management<br>
    -Allow new users to register<br>
@@ -21,14 +15,14 @@ Upcoming system features:<br>
    -Clear details provided on when payment is due<br>
    -Prevent a user from registering for an event that is full, expired, or cancelled<br>
 4. Unique desktop windows for each of the following services providing relevent details<br>
-      -Hockey Games<br>
-      -Skating Lessons<br>
-      -Open Skate<br>
-      -Theater on Ice<br>
-      -Figure Skating<br>
-      -Meet The Team<br>
-      -Amenities<br>
-      -About/Community<br>
+   -Hockey Games<br>
+   -Skating Lessons<br>
+   -Open Skate<br>
+   -Theater on Ice<br>
+   -Figure Skating<br>
+   -Meet The Team<br>
+   -Amenities<br>
+   -About/Community<br>
 5. Skate Club Membership<br>
    -Users can apply, change, and cancel club membership<br>
    -Two different options for club membership<br>
