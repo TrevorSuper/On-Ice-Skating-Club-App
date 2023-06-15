@@ -1,13 +1,21 @@
 from pathlib import Path
 from tkinter import Canvas, Button, PhotoImage
 from tkinter import *
+import webbrowser
 
 
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"img")
 
+def open_facebook():
+    webbrowser.open("https://www.facebook.com/detroitSkatingClub/")
 
+def open_instagram():
+    webbrowser.open("https://www.instagram.com/dscclub/?hl=en")
+
+def open_twitter():
+    webbrowser.open("https://twitter.com/dscclub?lang=en")
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -48,7 +56,7 @@ def frame_gui(root):
         image=canvas.button_image_1,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_1 clicked"),
+        command=lambda: print("button1"),
         relief="flat"
     )
     canvas.button_1.place(
@@ -89,16 +97,16 @@ def frame_gui(root):
 )
 
 
-    # Load the image for button_3
-    button_image_3_path = relative_to_assets("button_3.png")
-    canvas.button_image_3 = PhotoImage(file=button_image_3_path)
+    # Load the image for Meet the team
+    Meet_the_team_image_path = relative_to_assets("button_3.png")
+    canvas.Meet_the_team_image = PhotoImage(file=Meet_the_team_image_path)
 
     # Create button_3
     canvas.button_3 = Button(
-        image=canvas.button_image_3,
+        image=canvas.Meet_the_team_image,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_3 clicked"),
+        command=lambda: print("Meet the team"),
         relief="flat"
     )
 
@@ -204,7 +212,7 @@ def frame_gui(root):
         image=canvas.button_image_8,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_8 clicked"),
+        command=lambda: open_facebook(),
         relief="flat"
     )
 
@@ -225,7 +233,7 @@ def frame_gui(root):
         image=canvas.button_image_9,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_9 clicked"),
+        command=lambda: open_twitter(),
         relief="flat"
     )
 
@@ -246,7 +254,7 @@ def frame_gui(root):
         image=canvas.button_image_10,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_10 clicked"),
+        command=lambda: open_instagram(),
         relief="flat"
     )
 
