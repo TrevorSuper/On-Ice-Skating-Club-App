@@ -73,16 +73,17 @@ def SignUp(event):
     signUpWindow.title("Sign Up For Event ?")
     signUpWindow.config(width=300, height=200)
 
-    query = tk.Label(signUpWindow,
-        # Temp text, find out a way to include the actual event in the lable
-        # ie. "Would you like to sign up for " + event + "?"
-        text="Would you like to sign up for this event?").grid(row=1, column=1)
+    buttonCancel = tk.Button(
+        signUpWindow,
+        text="Cancel",
+        command=signUpWindow.destroy
+    )
 
-    buttonCancel = tk.Button(signUpWindow, text="Cancel", command=signUpWindow.destroy)
-
-    buttonSignUp = tk.Button(signUpWindow, text="Yes",
-        # Temp code, Proceede to add the event to a list ?
-        command=signUpWindow.destroy)
+    buttonSignUp = tk.Button(
+        signUpWindow,
+        text="Yes",
+        command=signUpWindow.destroy
+    )
 
     buttonCancel.grid(row= 10,column= 10)
     buttonSignUp.grid(row= 10,column=11)
@@ -91,7 +92,7 @@ def SignUp(event):
 
 
 root = tk.Tk()
-root.title("June 2023")
+root.title("July 2023")
 
 # Labels for the month and days along with placemnt 
 month =tk.Label(root, text= "June 2023", height = 3, width=10, font='bold')
@@ -325,37 +326,7 @@ saveBtn.grid(row=13, column=3)
 saveBtn = tk.Button(root, text="Add Event", command=addEvent)
 saveBtn.grid(row=13, column=5)
 
-# Bind it so that should a user double click into the text box, it opens an event sign up window
-text1.bind("<Double-Button-1>", SignUp)
-text2.bind('<Double-Button-1>', SignUp)
-text3.bind('<Double-Button-1>', SignUp)
-text4.bind('<Double-Button-1>', SignUp)
-text5.bind('<Double-Button-1>', SignUp)
-text6.bind('<Double-Button-1>', SignUp)
-text7.bind('<Double-Button-1>', SignUp)
-text8.bind('<Double-Button-1>', SignUp)
-text9.bind('<Double-Button-1>', SignUp)
-text10.bind('<Double-Button-1>', SignUp)
-text11.bind('<Double-Button-1>', SignUp)
-text12.bind('<Double-Button-1>', SignUp)
-text13.bind('<Double-Button-1>', SignUp)
-text14.bind('<Double-Button-1>', SignUp)
-text15.bind('<Double-Button-1>', SignUp)
-text16.bind('<Double-Button-1>', SignUp)
-text17.bind('<Double-Button-1>', SignUp)
-text18.bind('<Double-Button-1>', SignUp)
-text19.bind('<Double-Button-1>', SignUp)
-text20.bind('<Double-Button-1>', SignUp)
-text21.bind('<Double-Button-1>', SignUp)
-text22.bind('<Double-Button-1>', SignUp)
-text23.bind('<Double-Button-1>', SignUp)
-text24.bind('<Double-Button-1>', SignUp)
-text25.bind('<Double-Button-1>', SignUp)
-text26.bind('<Double-Button-1>', SignUp)
-text27.bind('<Double-Button-1>', SignUp)
-text28.bind('<Double-Button-1>', SignUp)
-text29.bind('<Double-Button-1>', SignUp)
-text30.bind('<Double-Button-1>', SignUp)
-
+# Bind it so that should a user click into the text box, it opens an event sign up window 
+text1.bind('<Double-Button-1>', SignUp)
 
 root.mainloop()
