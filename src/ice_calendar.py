@@ -357,5 +357,4 @@ text28.bind('<Double-Button-1>', SignUp)
 text29.bind('<Double-Button-1>', SignUp)
 text30.bind('<Double-Button-1>', SignUp)
 
-
 root.mainloop()
