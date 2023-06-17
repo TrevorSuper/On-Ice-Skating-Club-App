@@ -4,43 +4,6 @@ from tkinter import ttk
 import home_page
 import pymysql
 
-def admin_login():
-    admin_login_window = Tk() #instantiate an instance of a window
-    admin_login_window.geometry("1920x1080") #size of the window, chosing 
-    admin_login_window.title("On Ice Skating Administrator Login") #title of the window screen
-    ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png') #converts the png to a usable image for the window icon and instantiates it as an object
-    admin_login_window.iconphoto(True, ShoeIcon) #sets the object ShoeIcon as the window icon
-    #window.config(background="") can set a color such as "blue" in quotation marks or use a hex value (with hashtag) to set the background a certain color, google hex color picker
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=0)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=1)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=2)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=3)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=4)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=5)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=6)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=7)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=8)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=0,column=9)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=1,column=0)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=2,column=0)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=3,column=0)
-    empty_grid = Label(admin_login_window,height=1,width=21).grid(row=4,column=0)
-    user_name_label = Label(admin_login_window,text="Administrator: ",font=("Arial",12)).grid(row=3,column=4)
-    user_name_entry = Entry(admin_login_window,font=("Arial",12)).grid(row=3,column=5)
-    user_pw_label = Label(admin_login_window,text="Password: ",font=("Arial",12)).grid(row=4,column=4)
-    user_pw_entry = Entry(admin_login_window,font=("Arial",12),show="*").grid(row=4,column=5)
-    def attempt_admin_login():
-        print('attempt_admin_login')
-        #end
-    admin_login_button = Button(admin_login_window,text="Login",width = "15",command=attempt_admin_login,font=("Arial",12)).grid(row=5,column=4,columnspan=2)
-    def open_user_login():
-        admin_login_window.destroy()
-        user_login()
-        #end
-    not_an_admin_button = Button(admin_login_window,text="Not An Admin?",width = "15",command=open_user_login,font=("Arial",12)).grid(row=6,column=4,columnspan=2)
-
-    #admin_login_window.mainloop() #makes the window visible, and will listen for events, it important this mainloop function is run after setting all the previous widgets
-
 def user_login():
     user_login_window = Tk()
     user_login_window.geometry("1920x1080")
@@ -246,11 +209,6 @@ def user_login():
         register_new_user()
         #end
     register_button = Button(user_login_window,text='Create Account',width='15',command=open_register,font=('Arial',12)).grid(row=12,column=4,columnspan=2)
-    def open_admin_login():
-        user_login_window.destroy()
-        admin_login()
-        #end
-    are_you_an_admin_button = Button(user_login_window,text='Are you an Admin?',width = "15",command=open_admin_login,font=('Arial',12)).grid(row=14,column=4,columnspan=2)
     def return_home():
         user_login_window.destroy()
         home_page.home_screen()
