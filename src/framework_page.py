@@ -2,6 +2,7 @@ from pathlib import Path
 from tkinter import Canvas, Button, PhotoImage
 from tkinter import *
 import webbrowser
+import homepage_buttons
 
 
 
@@ -16,6 +17,9 @@ def open_instagram():
 
 def open_twitter():
     webbrowser.open("https://twitter.com/dscclub?lang=en")
+
+def show_buttons():
+    components = buttonpack(canvas)
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -56,7 +60,7 @@ def frame_gui(root):
         image=canvas.button_image_1,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button1"),
+        command=lambda: print("test"),
         relief="flat"
     )
     canvas.button_1.place(
