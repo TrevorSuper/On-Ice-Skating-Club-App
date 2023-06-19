@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from tkinter import ttk
 import home_page
+import openskate
 import pymysql
 
 def user_login():
