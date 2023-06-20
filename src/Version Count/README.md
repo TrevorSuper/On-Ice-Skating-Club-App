@@ -20,4 +20,6 @@ v0.00.0009<br>
 -Linked the calendar system to be runned from main<br>
 v0.00.0010<br>
 -Implementing the beginnings of useful/vaulable functionality to the user account system<br>
--Such as a my acount page, and open skate page, where users can regiser for open skate time
+-Such as a my acount page, and open skate page, where users can regiser for open skate time<br>
+v0.00.0011<br>
+-Users can now "Sign Out"

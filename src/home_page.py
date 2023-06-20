@@ -7,7 +7,7 @@ from tkinter import *
 def open_home_screen_without_user_logged_in():
     home_window = Tk()
     home_window.geometry("1920x1080")
-    home_window.title("On Ice Skating v0.00.0010")
+    home_window.title("On Ice Skating v0.00.0011")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     home_window.iconphoto(True, ShoeIcon)
     def open_user_login():
@@ -35,19 +35,16 @@ def open_home_screen_without_user_logged_in():
     meet_the_team_dropdown = Label(home_window,text="Meet the team",font=('Arial',12)).grid(row=1,column=3)
     amenities_dropdown = Label(home_window,text="Amenities",font=('Arial',12)).grid(row=1,column=4)
     about_community_dropdown = Label(home_window,text='About/Community',font=('Arial',12)).grid(row=1,column=5)
-    login_button = Button(home_window,text='Login',width=15,font=('Arial',12),command=open_user_login).grid(row=1,column=9)
+    login_button = Button(home_window,text='Sign In',width=15,font=('Arial',12),command=open_user_login).grid(row=1,column=9)
     #empty_space = Label(home_window,text = "").pack() cannot use geometry manager pack inside . which already has slaves managed by grid
     home_window.mainloop()
 
 def open_home_screen_with_user_logged_in():
     logged_window = Tk()
     logged_window.geometry("1920x1080")
-    logged_window.title("On Ice Skating v0.00.0010")
+    logged_window.title("On Ice Skating v0.00.0011")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     logged_window.iconphoto(True, ShoeIcon)
-    def sign_out():
-        logged_window.destroy()
-        open_home_screen_without_user_logged_in()
     empty_grid = Label(logged_window,height=1,width=21).grid(row=0,column=0)
     empty_grid = Label(logged_window,height=1,width=21).grid(row=0,column=1)
     empty_grid = Label(logged_window,height=1,width=21).grid(row=0,column=2)

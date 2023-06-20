@@ -41,15 +41,15 @@ def open_openskate_window_without_log_in():
         elif rink_entry_box.get()=='Rink A':
             messagebox.showerror('Error','You must be logged in to an account to register for an event.')
             openskate_window.destroy()
-            login_page.user_login()
+            login_page.user_login_then_redirect_to_openskate_logged_in()
         elif rink_entry_box.get()=='Rink B':
             messagebox.showerror('Error','You must be logged in to an account to register for an event.')
             openskate_window.destroy()
-            login_page.user_login()
+            login_page.user_login_then_redirect_to_openskate_logged_in()
         elif rink_entry_box.get()=='Rink C':
             messagebox.showerror('Error','You must be logged in to an account to register for an event.')
             openskate_window.destroy()
-            login_page.user_login()
+            login_page.user_login_then_redirect_to_openskate_logged_in()
     reserve_skate_time_button = Button(openskate_window,text='Reserve Open Skate Time',font=('Arial',12),command=attempt_to_reserve_skate_time_when_user_is_not_logged_in).grid(row=4,column=4,columnspan=2)
     # end of tkinter dropdown menu example
 
