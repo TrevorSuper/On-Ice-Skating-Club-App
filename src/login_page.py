@@ -58,10 +58,8 @@ def user_login():
             else:
                 messagebox.showinfo('Success','Login Successful')
                 con.close()
-                global emailEntry
-                emailEntry = email_entry.get()
                 user_login_window.destroy()
-                home_page.home_screen()
+                home_page.open_home_screen_with_user_logged_in()
 
         #end
     user_login_button = Button(user_login_window,text="Login",width = "15",command=attempt_user_login,font=("Arial",12)).grid(row=6,column=4,columnspan=2)
@@ -210,9 +208,9 @@ def user_login():
     register_button = Button(user_login_window,text='Create Account',width='15',command=open_register,font=('Arial',12)).grid(row=12,column=4,columnspan=2)
     def return_home():
         user_login_window.destroy()
-        home_page.home_screen()
+        home_page.open_home_screen_without_user_logged_in()
         #end
-    back_to_home_page_button = Button(user_login_window,text='Previous Page',width='13',command=return_home,font=('Arial',12)).grid(row=0,column=0)
+    back_to_home_page_button = Button(user_login_window,text='Go to home page',width='15',command=return_home,font=('Arial',12)).grid(row=0,column=0)
     #end of user_login()
 
 def register_new_user():
@@ -227,15 +225,15 @@ def register_new_user():
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     register_window.iconphoto(True, ShoeIcon)
     empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=0)
-    empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=1)
-    empty_grid = Label(register_window,height=1,width=21,background='red').grid(row=0,column=2)
-    empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=3)
-    empty_grid = Label(register_window,height=1,width=21,background='red').grid(row=0,column=4)
-    empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=5)
-    empty_grid = Label(register_window,height=1,width=21,background='red').grid(row=0,column=6)
-    empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=7)
-    empty_grid = Label(register_window,height=1,width=21,background='red').grid(row=0,column=8)
-    empty_grid = Label(register_window,height=1,width=21,background='blue').grid(row=0,column=9)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=1)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=2)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=3)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=4)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=5)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=6)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=7)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=8)
+    empty_grid = Label(register_window,height=1,width=21).grid(row=0,column=9)
     empty_grid = Label(register_window,height=1,width=21).grid(row=1,column=0)
     empty_grid = Label(register_window,height=1,width=21).grid(row=2,column=0)
     empty_grid = Label(register_window,height=1,width=21).grid(row=3,column=0)
@@ -324,6 +322,6 @@ def register_new_user():
     open_login_button = Button(register_window,text='Login',font=("Arial",12),command=open_login).grid(row=14,column=4,columnspan=2)
     def return_home():
         register_window.destroy()
-        home_page.home_screen()
+        home_page.open_home_screen_without_user_logged_in()
         #end
     back_to_home_page_button = Button(register_window,text='Return to home page',width='16',command=return_home,font=('Arial',12)).grid(row=0,column=0)

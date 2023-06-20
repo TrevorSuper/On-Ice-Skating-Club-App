@@ -15,4 +15,9 @@ v0.00.0006<br>
 v0.00.0007<br>
 -Users are now required to provide a security question and answer upon creating an account<br>
 v0.00.0008<br>
--Users can now update their password using their security question and answer
+-Users can now update their password using their security question and answer<br>
+v0.00.0009<br>
+-Linked the calendar system to be runned from main<br>
+v0.00.0010<br>
+-Implementing the beginnings of useful/vaulable functionality to the user account system<br>
+-Such as a my acount page, and open skate page, where users can regiser for open skate time

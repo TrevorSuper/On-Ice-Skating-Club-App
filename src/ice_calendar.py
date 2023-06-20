@@ -3,7 +3,7 @@ import tkinter as tk
 import pymysql
 import home_page
 
-def open_ice_caledar():
+def open_ice_calendar():
     
     # Define the functionality of the 'save' and 'add event' buttons 
     def addEvent():
