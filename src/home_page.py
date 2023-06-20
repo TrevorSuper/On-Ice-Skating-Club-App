@@ -1,7 +1,7 @@
 import login_page
 import openskate
 import my_account
-#import ice_calendar
+import ice_calendar
 from tkinter import *
 def home_screen():
     home_window = Tk()
@@ -29,7 +29,7 @@ def home_screen():
     open_openskate_window_button = Button(home_window,text="Open Skate",width=15,font=('Arial',12),command=open_openskate_window).grid(row=1,column=1)
     def open_calendar():
         home_window.destroy()
-        #ice_calendar.function_name_to_open_the_calendar_page()
+        ice_calendar.open_ice_caledar()
     open_calendar_button = Button(home_window,text="Event Calendar",width=15,font=('Arial',12),command=open_calendar).grid(row=1,column=2)
     meet_the_team_dropdown = Label(home_window,text="Meet the team",font=('Arial',12)).grid(row=1,column=3)
     amenities_dropdown = Label(home_window,text="Amenities",font=('Arial',12)).grid(row=1,column=4)
