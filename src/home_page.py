@@ -30,7 +30,7 @@ def open_home_screen_without_user_logged_in():
     open_openskate_window_button = Button(home_window,text="Open Skate",width=15,font=('Arial',12),command=unlogged_home_screen_to_unlogged_openskate).grid(row=1,column=1)
     def open_calendar():
         home_window.destroy()
-        ice_calendar.open_ice_calendar()
+        ice_calendar.open_ice_calendar_not_logged_in()
     open_calendar_button = Button(home_window,text="Event Calendar",width=15,font=('Arial',12),command=open_calendar).grid(row=1,column=2)
     meet_the_team_dropdown = Label(home_window,text="Meet the team",font=('Arial',12)).grid(row=1,column=3)
     amenities_dropdown = Label(home_window,text="Amenities",font=('Arial',12)).grid(row=1,column=4)
@@ -63,10 +63,10 @@ def open_home_screen_with_user_logged_in():
         logged_window.destroy()
         openskate.open_openskate_window_with_log_in()
     open_openskate_window_button = Button(logged_window,text="Open Skate",width=15,font=('Arial',12),command=logged_home_screen_to_logged_open_skate).grid(row=1,column=1)
-    def open_calendar():
+    def open_calendar_not_logged_in():
         logged_window.destroy()
-        ice_calendar.open_ice_calendar()
-    open_calendar_button = Button(logged_window,text="Event Calendar",width=15,font=('Arial',12),command=open_calendar).grid(row=1,column=2)
+        ice_calendar.open_ice_calendar_logged_in()
+    open_calendar_button = Button(logged_window,text="Event Calendar",width=15,font=('Arial',12),command=open_calendar_not_logged_in).grid(row=1,column=2)
     meet_the_team_dropdown = Label(logged_window,text="Meet the team",font=('Arial',12)).grid(row=1,column=3)
     amenities_dropdown = Label(logged_window,text="Amenities",font=('Arial',12)).grid(row=1,column=4)
     about_community_dropdown = Label(logged_window,text='About/Community',font=('Arial',12)).grid(row=1,column=5)
