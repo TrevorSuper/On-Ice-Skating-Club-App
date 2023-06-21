@@ -2,10 +2,12 @@
 Step 1 - This program runs on Python version 3.11.3<br>
 <br>
 Step 2 - You will also need Visual Studio code and the Visual Studio Code Python extension<br>
-   - Follow the links below:<br>
-   - https://code.visualstudio.com/docs/python/python-tutorial<br>
-   - Follow this video until 2:24: https://www.youtube.com/watch?v=L3FwRRx6bqo<br>
-   The SQLite plugin in VS Code doesn't install SQLite. It only adds the capability to VS Code to connect to a SQLite database.<br>
+    - Follow the links below:<br>
+    - https://code.visualstudio.com/docs/python/python-tutorial<br>
+    - Follow this video until 2:24: https://www.youtube.com/watch?v=L3FwRRx6bqo<br>
+<br>
+The following 20 lines are from this link: https://www.reddit.com/r/vscode/comments/nrxpo1/comment/h0kp1i0/?context=3<br>
+The SQLite plugin in VS Code doesn't install SQLite. It only adds the capability to VS Code to connect to a SQLite database.<br>
 <br>
 So, yes, you have to -<br>
 <br>
@@ -31,11 +33,11 @@ https://www.youtube.com/watch?v=6xs6-eegIHA&t=19s<br>
 <br>
 Deviations:<br>
 - At 1:22 he will select what MySQL products to download. Ignore what specific products he chooses and download the following<br>
-   - MySQL Server Version 8.0.33<br>
-   - MySQL Workbench Version 8.0.33<br>
-   - MySQL Shell Version 8.0.33<br>
-   - Connector/Python Version 8.0.33<br>
-   - The Architecture for all of these products are X64<br>
+    - MySQL Server Version 8.0.33<br>
+    - MySQL Workbench Version 8.0.33<br>
+    - MySQL Shell Version 8.0.33<br>
+    - Connector/Python Version 8.0.33<br>
+    - The Architecture for all of these products are X64<br>
 <br>
 - At 3:23 he will set the root password as: root<br>
 - DO NOT set the root password as root<br>
@@ -47,6 +49,6 @@ Step 4 - You will need to type:<br>
     Into your Python Command terminal in Visual Studio Code<br>
 <br>
 Step 5 - You will need the following VSCode Marketplace Extensions<br>
-   - Pylance by Microsoft<br>
-   - Python by Microsoft<br>
-   - SQLite by alexcvzz
+    - Pylance by Microsoft<br>
+    - Python by Microsoft<br>
+    - SQLite by alexcvzz
