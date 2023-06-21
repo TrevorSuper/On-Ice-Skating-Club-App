@@ -35,6 +35,7 @@ def open_ice_calendar_logged_in():
 
     ice_calendar = tk.Tk()
     ice_calendar.title("Calendar")
+    ice_calendar.geometry("1920x1080")
 
     # Labels for the month and days along with placemnt 
     month =tk.Label(ice_calendar, text = "June 2023", height = 3, width = 10, font = 'bold')
@@ -46,14 +47,14 @@ def open_ice_calendar_logged_in():
     friday = tk.Label(ice_calendar, text = "Friday", height = 2, width = 10)
     saturday = tk.Label(ice_calendar, text = "Saturday", height = 2, width = 10)
 
-    month.grid(row = 1, column = 3, columnspan = 3, sticky = 'ew')
-    sunday.grid(row = 2, column = 1)
-    monday.grid(row = 2, column = 2)
-    tuesday.grid(row = 2, column = 3)
-    wednesday.grid(row = 2, column = 4)
-    thursday.grid(row = 2, column = 5)
-    friday.grid(row = 2, column = 6)
-    saturday.grid(row = 2, column = 7)
+    month.grid(row = 1, column = 9, columnspan = 7, sticky = 'ew')
+    sunday.grid(row = 2, column = 7)
+    monday.grid(row = 2, column = 8)
+    tuesday.grid(row = 2, column = 9)
+    wednesday.grid(row = 2, column = 10)
+    thursday.grid(row = 2, column = 11)
+    friday.grid(row = 2, column = 12)
+    saturday.grid(row = 2, column = 13)
     
 
     # Fillers
@@ -65,201 +66,213 @@ def open_ice_calendar_logged_in():
     filler2 = tk.Label(ice_calendar, height = 5, width = 10)
     filler3 = tk.Label(ice_calendar, height = 5, width = 10)
     filler4 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol1 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol2 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol3 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol4 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol5 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol6 = tk.Label(ice_calendar, height = 5, width = 10)
 
-    fillerS.grid(row = 3, column = 1)
-    fillerM.grid(row = 3, column = 2)
-    fillerT.grid(row = 3, column = 3)
-    fillerW.grid(row = 3, column = 4)
-    filler1.grid(row = 4, column = 1)
-    filler2.grid(row = 4, column = 2)
-    filler3.grid(row = 4, column = 3)
-    filler4.grid(row = 4, column = 4)
+    fillerS.grid(row = 3, column = 7)
+    fillerM.grid(row = 3, column = 8)
+    fillerT.grid(row = 3, column = 9)
+    fillerW.grid(row = 3, column = 10)
+    filler1.grid(row = 4, column = 7)
+    filler2.grid(row = 4, column = 8)
+    filler3.grid(row = 4, column = 9)
+    filler4.grid(row = 4, column = 10)
+    fillerCol1.grid(row = 1, column = 1)
+    fillerCol2.grid(row = 1, column = 2)
+    fillerCol3.grid(row = 1, column = 3)
+    fillerCol4.grid(row = 1, column = 4)
+    fillerCol5.grid(row = 1, column = 5)
+    fillerCol6.grid(row = 1, column = 6)
 
 
     # Labels for the numbers of the days in the month
     lbl1 = tk.Label(ice_calendar, text = "1", height = 2, width = 10)
-    lbl1.grid(row = 3, column = 5)
+    lbl1.grid(row = 3, column = 11)
 
     lbl2 = tk.Label(ice_calendar, text = "2", height = 2, width = 10)
-    lbl2.grid(row = 3, column = 6)
+    lbl2.grid(row = 3, column = 12)
 
     lbl3 = tk.Label(ice_calendar, text = "3", height = 2, width = 10)
-    lbl3.grid(row = 3, column = 7)
+    lbl3.grid(row = 3, column = 13)
 
     lbl4 = tk.Label(ice_calendar, text = "4", height = 2, width = 10)
-    lbl4.grid(row = 5, column = 1)
+    lbl4.grid(row = 5, column = 7)
 
     lbl5 = tk.Label(ice_calendar, text = "5", height = 2, width = 10)
-    lbl5.grid(row = 5, column = 2)
+    lbl5.grid(row = 5, column = 8)
 
     lbl6 = tk.Label(ice_calendar, text = "6", height = 2, width = 10)
-    lbl6.grid(row = 5, column = 3)
+    lbl6.grid(row = 5, column = 9)
 
     lbl7 = tk.Label(ice_calendar, text = "7", height = 2, width = 10)
-    lbl7.grid(row = 5, column = 4)
+    lbl7.grid(row = 5, column = 10)
 
     lbl8 = tk.Label(ice_calendar, text = "8", height = 2, width = 10)
-    lbl8.grid(row = 5, column = 5)
+    lbl8.grid(row = 5, column = 11)
 
     lbl9 = tk.Label(ice_calendar, text = "9", height = 2, width = 10)
-    lbl9.grid(row = 5, column = 6)
+    lbl9.grid(row = 5, column = 12)
 
     lbl10 = tk.Label(ice_calendar, text = "10", height = 2, width = 10)
-    lbl10.grid(row = 5, column = 7)
+    lbl10.grid(row = 5, column = 13)
 
     lbl11 = tk.Label(ice_calendar, text = "11", height = 2, width = 10)
-    lbl11.grid(row = 7, column = 1)
+    lbl11.grid(row = 7, column = 7)
 
     lbl12 = tk.Label(ice_calendar, text = "12", height = 2, width = 10)
-    lbl12.grid(row = 7, column = 2)
+    lbl12.grid(row = 7, column = 8)
 
     lbl13 = tk.Label(ice_calendar, text = "13", height = 2, width = 10)
-    lbl13.grid(row = 7, column = 3)
+    lbl13.grid(row = 7, column = 9)
 
     lbl14 = tk.Label(ice_calendar, text = "14", height = 2, width = 10)
-    lbl14.grid(row = 7, column = 4)
+    lbl14.grid(row = 7, column = 10)
 
     lbl15 = tk.Label(ice_calendar, text = "15", height = 2, width = 10)
-    lbl15.grid(row = 7, column = 5)
+    lbl15.grid(row = 7, column = 11)
 
     lbl16 = tk.Label(ice_calendar, text = "16", height = 2, width = 10)
-    lbl16.grid(row = 7, column = 6)
+    lbl16.grid(row = 7, column = 12)
 
     lbl17 = tk.Label(ice_calendar, text = "17", height = 2, width = 10)
-    lbl17.grid(row = 7, column = 7)
+    lbl17.grid(row = 7, column = 13)
 
     lbl18 = tk.Label(ice_calendar, text = "18", height = 2, width = 10)
-    lbl18.grid(row = 9, column = 1)
+    lbl18.grid(row = 9, column = 7)
 
     lbl19 = tk.Label(ice_calendar, text = "19", height = 2, width = 10)
-    lbl19.grid(row = 9, column = 2)
+    lbl19.grid(row = 9, column = 8)
 
     lbl20 = tk.Label(ice_calendar, text = "20", height = 2, width = 10)
-    lbl20.grid(row = 9, column = 3)
+    lbl20.grid(row = 9, column = 9)
 
     lbl21 = tk.Label(ice_calendar, text = "21", height = 2, width = 10)
-    lbl21.grid(row = 9, column = 4)
+    lbl21.grid(row = 9, column = 10)
 
     lbl22 = tk.Label(ice_calendar, text = "22", height = 2, width = 10)
-    lbl22.grid(row = 9, column = 5)
+    lbl22.grid(row = 9, column = 11)
 
     lbl23 = tk.Label(ice_calendar, text = "23", height = 2, width = 10)
-    lbl23.grid(row = 9, column = 6)
+    lbl23.grid(row = 9, column = 12)
 
     lbl24 = tk.Label(ice_calendar, text = "24", height = 2, width = 10)
-    lbl24.grid(row = 9, column = 7)
+    lbl24.grid(row = 9, column = 13)
 
     lbl25 = tk.Label(ice_calendar, text = "25", height = 2, width = 10)
-    lbl25.grid(row = 11, column = 1)
+    lbl25.grid(row = 11, column = 7)
 
     lbl26 = tk.Label(ice_calendar, text = "26", height = 2, width = 10)
-    lbl26.grid(row = 11, column = 2)
+    lbl26.grid(row = 11, column = 8)
 
     lbl27 = tk.Label(ice_calendar, text = "27", height = 2, width = 10)
-    lbl27.grid(row = 11, column = 3)
+    lbl27.grid(row = 11, column = 9)
 
     lbl28 = tk.Label(ice_calendar, text = "28", height = 2, width = 10)
-    lbl28.grid(row = 11, column = 4)
+    lbl28.grid(row = 11, column = 10)
 
     lbl29 = tk.Label(ice_calendar, text = "29", height = 2, width = 10)
-    lbl29.grid(row = 11, column = 5)
+    lbl29.grid(row = 11, column = 11)
 
     lbl30 = tk.Label(ice_calendar, text = "30", height = 2, width = 10)
-    lbl30.grid(row = 11, column = 6)
+    lbl30.grid(row = 11, column = 12)
 
     # Editable text boxes to place the events into
     text1 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text1.grid(row = 4, column = 5)
+    text1.grid(row = 4, column = 11)
 
     text2 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text2.grid(row = 4, column = 6)
+    text2.grid(row = 4, column = 12)
 
     text3 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text3.grid(row = 4, column = 7)
+    text3.grid(row = 4, column = 13)
 
     text4 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text4.grid(row = 6, column = 1)
+    text4.grid(row = 6, column = 7)
 
     text5 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text5.grid(row = 6, column = 2)
+    text5.grid(row = 6, column = 8)
 
     text6 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text6.grid(row = 6, column = 3)
+    text6.grid(row = 6, column = 9)
 
     text7 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text7.grid(row = 6, column = 4)
+    text7.grid(row = 6, column = 10)
 
     text8 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text8.grid(row = 6, column = 5)
+    text8.grid(row = 6, column = 11)
 
     text9 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text9.grid(row = 6, column = 6)
+    text9.grid(row = 6, column = 12)
 
     text10 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text10.grid(row = 6, column = 7)
+    text10.grid(row = 6, column = 13)
 
     text11 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text11.grid(row = 8, column = 1)
+    text11.grid(row = 8, column = 7)
 
     text12 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text12.grid(row = 8, column = 2)
+    text12.grid(row = 8, column = 8)
 
     text13 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text13.grid(row = 8, column = 3)
+    text13.grid(row = 8, column = 9)
 
     text14 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text14.grid(row = 8, column = 4)
+    text14.grid(row = 8, column = 10)
 
     text15 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text15.grid(row = 8, column = 5)
+    text15.grid(row = 8, column = 11)
 
     text16 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text16.grid(row = 8, column = 6)
+    text16.grid(row = 8, column = 12)
 
     text17 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text17.grid(row = 8, column = 7)
+    text17.grid(row = 8, column = 13)
 
     text18 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text18.grid(row = 10, column = 1)
+    text18.grid(row = 10, column = 7)
 
     text19 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text19.grid(row = 10, column = 2)
+    text19.grid(row = 10, column = 8)
 
     text20 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text20.grid(row = 10, column = 3)
+    text20.grid(row = 10, column = 9)
 
     text21 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text21.grid(row = 10, column = 4)
+    text21.grid(row = 10, column = 10)
 
     text22 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text22.grid(row = 10, column = 5)
+    text22.grid(row = 10, column = 11)
 
     text23 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text23.grid(row = 10, column = 6)
+    text23.grid(row = 10, column = 12)
 
     text24 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text24.grid(row = 10, column = 7)
+    text24.grid(row = 10, column = 13)
 
     text25 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text25.grid(row = 12, column = 1)
+    text25.grid(row = 12, column = 7)
 
     text26 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text26.grid(row = 12, column = 2)
+    text26.grid(row = 12, column = 8)
 
     text27 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text27.grid(row = 12, column = 3)
+    text27.grid(row = 12, column = 9)
 
     text28 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text28.grid(row = 12, column = 4)
+    text28.grid(row = 12, column = 10)
 
     text29 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text29.grid(row = 12, column = 5)
+    text29.grid(row = 12, column = 11)
 
     text30 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text30.grid(row = 12, column = 6)
+    text30.grid(row = 12, column = 12)
 
     homeBtn = tk.Button(ice_calendar, text = "Return to Home Page", command = goHome)
-    homeBtn.grid(row = 13, column = 3, columnspan = 3)
+    homeBtn.grid(row = 13, column = 9, columnspan = 3)
 
 
     # Bind it so that should a user double click into the text box, it opens an event sign up window
@@ -315,6 +328,7 @@ def open_ice_calendar_not_logged_in():
 
     ice_calendar = tk.Tk()
     ice_calendar.title("Calendar")
+    ice_calendar.geometry("1920x1080")
 
     # Labels for the month and days along with placemnt 
     month =tk.Label(ice_calendar, text = "June 2023", height = 3, width = 10, font = 'bold')
@@ -325,15 +339,15 @@ def open_ice_calendar_not_logged_in():
     thursday = tk.Label(ice_calendar, text = "Thursday", height = 2, width = 10)
     friday = tk.Label(ice_calendar, text = "Friday", height = 2, width = 10)
     saturday = tk.Label(ice_calendar, text = "Saturday", height = 2, width = 10)
-
-    month.grid(row = 1, column = 3, columnspan = 3, sticky = 'ew')
-    sunday.grid(row = 2, column = 1)
-    monday.grid(row = 2, column = 2)
-    tuesday.grid(row = 2, column = 3)
-    wednesday.grid(row = 2, column = 4)
-    thursday.grid(row = 2, column = 5)
-    friday.grid(row = 2, column = 6)
-    saturday.grid(row = 2, column = 7)
+    
+    month.grid(row = 1, column = 9, columnspan = 7, sticky = 'ew')
+    sunday.grid(row = 2, column = 7)
+    monday.grid(row = 2, column = 8)
+    tuesday.grid(row = 2, column = 9)
+    wednesday.grid(row = 2, column = 10)
+    thursday.grid(row = 2, column = 11)
+    friday.grid(row = 2, column = 12)
+    saturday.grid(row = 2, column = 13)
     
 
     # Fillers
@@ -345,201 +359,214 @@ def open_ice_calendar_not_logged_in():
     filler2 = tk.Label(ice_calendar, height = 5, width = 10)
     filler3 = tk.Label(ice_calendar, height = 5, width = 10)
     filler4 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol1 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol2 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol3 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol4 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol5 = tk.Label(ice_calendar, height = 5, width = 10)
+    fillerCol6 = tk.Label(ice_calendar, height = 5, width = 10)
 
-    fillerS.grid(row = 3, column = 1)
-    fillerM.grid(row = 3, column = 2)
-    fillerT.grid(row = 3, column = 3)
-    fillerW.grid(row = 3, column = 4)
-    filler1.grid(row = 4, column = 1)
-    filler2.grid(row = 4, column = 2)
-    filler3.grid(row = 4, column = 3)
-    filler4.grid(row = 4, column = 4)
+    fillerS.grid(row = 3, column = 7)
+    fillerM.grid(row = 3, column = 8)
+    fillerT.grid(row = 3, column = 9)
+    fillerW.grid(row = 3, column = 10)
+    filler1.grid(row = 4, column = 7)
+    filler2.grid(row = 4, column = 8)
+    filler3.grid(row = 4, column = 9)
+    filler4.grid(row = 4, column = 10)
+    fillerCol1.grid(row = 1, column = 1)
+    fillerCol2.grid(row = 1, column = 2)
+    fillerCol3.grid(row = 1, column = 3)
+    fillerCol4.grid(row = 1, column = 4)
+    fillerCol5.grid(row = 1, column = 5)
+    fillerCol6.grid(row = 1, column = 6)
 
 
     # Labels for the numbers of the days in the month
     lbl1 = tk.Label(ice_calendar, text = "1", height = 2, width = 10)
-    lbl1.grid(row = 3, column = 5)
+    lbl1.grid(row = 3, column = 11)
 
     lbl2 = tk.Label(ice_calendar, text = "2", height = 2, width = 10)
-    lbl2.grid(row = 3, column = 6)
+    lbl2.grid(row = 3, column = 12)
 
     lbl3 = tk.Label(ice_calendar, text = "3", height = 2, width = 10)
-    lbl3.grid(row = 3, column = 7)
+    lbl3.grid(row = 3, column = 13)
 
     lbl4 = tk.Label(ice_calendar, text = "4", height = 2, width = 10)
-    lbl4.grid(row = 5, column = 1)
+    lbl4.grid(row = 5, column = 7)
 
     lbl5 = tk.Label(ice_calendar, text = "5", height = 2, width = 10)
-    lbl5.grid(row = 5, column = 2)
+    lbl5.grid(row = 5, column = 8)
 
     lbl6 = tk.Label(ice_calendar, text = "6", height = 2, width = 10)
-    lbl6.grid(row = 5, column = 3)
+    lbl6.grid(row = 5, column = 9)
 
     lbl7 = tk.Label(ice_calendar, text = "7", height = 2, width = 10)
-    lbl7.grid(row = 5, column = 4)
+    lbl7.grid(row = 5, column = 10)
 
     lbl8 = tk.Label(ice_calendar, text = "8", height = 2, width = 10)
-    lbl8.grid(row = 5, column = 5)
+    lbl8.grid(row = 5, column = 11)
 
     lbl9 = tk.Label(ice_calendar, text = "9", height = 2, width = 10)
-    lbl9.grid(row = 5, column = 6)
+    lbl9.grid(row = 5, column = 12)
 
     lbl10 = tk.Label(ice_calendar, text = "10", height = 2, width = 10)
-    lbl10.grid(row = 5, column = 7)
+    lbl10.grid(row = 5, column = 13)
 
     lbl11 = tk.Label(ice_calendar, text = "11", height = 2, width = 10)
-    lbl11.grid(row = 7, column = 1)
+    lbl11.grid(row = 7, column = 7)
 
     lbl12 = tk.Label(ice_calendar, text = "12", height = 2, width = 10)
-    lbl12.grid(row = 7, column = 2)
+    lbl12.grid(row = 7, column = 8)
 
     lbl13 = tk.Label(ice_calendar, text = "13", height = 2, width = 10)
-    lbl13.grid(row = 7, column = 3)
+    lbl13.grid(row = 7, column = 9)
 
     lbl14 = tk.Label(ice_calendar, text = "14", height = 2, width = 10)
-    lbl14.grid(row = 7, column = 4)
+    lbl14.grid(row = 7, column = 10)
 
     lbl15 = tk.Label(ice_calendar, text = "15", height = 2, width = 10)
-    lbl15.grid(row = 7, column = 5)
+    lbl15.grid(row = 7, column = 11)
 
     lbl16 = tk.Label(ice_calendar, text = "16", height = 2, width = 10)
-    lbl16.grid(row = 7, column = 6)
+    lbl16.grid(row = 7, column = 12)
 
     lbl17 = tk.Label(ice_calendar, text = "17", height = 2, width = 10)
-    lbl17.grid(row = 7, column = 7)
+    lbl17.grid(row = 7, column = 13)
 
     lbl18 = tk.Label(ice_calendar, text = "18", height = 2, width = 10)
-    lbl18.grid(row = 9, column = 1)
+    lbl18.grid(row = 9, column = 7)
 
     lbl19 = tk.Label(ice_calendar, text = "19", height = 2, width = 10)
-    lbl19.grid(row = 9, column = 2)
+    lbl19.grid(row = 9, column = 8)
 
     lbl20 = tk.Label(ice_calendar, text = "20", height = 2, width = 10)
-    lbl20.grid(row = 9, column = 3)
+    lbl20.grid(row = 9, column = 9)
 
     lbl21 = tk.Label(ice_calendar, text = "21", height = 2, width = 10)
-    lbl21.grid(row = 9, column = 4)
+    lbl21.grid(row = 9, column = 10)
 
     lbl22 = tk.Label(ice_calendar, text = "22", height = 2, width = 10)
-    lbl22.grid(row = 9, column = 5)
+    lbl22.grid(row = 9, column = 11)
 
     lbl23 = tk.Label(ice_calendar, text = "23", height = 2, width = 10)
-    lbl23.grid(row = 9, column = 6)
+    lbl23.grid(row = 9, column = 12)
 
     lbl24 = tk.Label(ice_calendar, text = "24", height = 2, width = 10)
-    lbl24.grid(row = 9, column = 7)
+    lbl24.grid(row = 9, column = 13)
 
     lbl25 = tk.Label(ice_calendar, text = "25", height = 2, width = 10)
-    lbl25.grid(row = 11, column = 1)
+    lbl25.grid(row = 11, column = 7)
 
     lbl26 = tk.Label(ice_calendar, text = "26", height = 2, width = 10)
-    lbl26.grid(row = 11, column = 2)
+    lbl26.grid(row = 11, column = 8)
 
     lbl27 = tk.Label(ice_calendar, text = "27", height = 2, width = 10)
-    lbl27.grid(row = 11, column = 3)
+    lbl27.grid(row = 11, column = 9)
 
     lbl28 = tk.Label(ice_calendar, text = "28", height = 2, width = 10)
-    lbl28.grid(row = 11, column = 4)
+    lbl28.grid(row = 11, column = 10)
 
     lbl29 = tk.Label(ice_calendar, text = "29", height = 2, width = 10)
-    lbl29.grid(row = 11, column = 5)
+    lbl29.grid(row = 11, column = 11)
 
     lbl30 = tk.Label(ice_calendar, text = "30", height = 2, width = 10)
-    lbl30.grid(row = 11, column = 6)
+    lbl30.grid(row = 11, column = 12)
 
     # Editable text boxes to place the events into
     text1 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text1.grid(row = 4, column = 5)
+    text1.grid(row = 4, column = 11)
 
     text2 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text2.grid(row = 4, column = 6)
+    text2.grid(row = 4, column = 12)
 
     text3 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text3.grid(row = 4, column = 7)
+    text3.grid(row = 4, column = 13)
 
     text4 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text4.grid(row = 6, column = 1)
+    text4.grid(row = 6, column = 7)
 
     text5 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text5.grid(row = 6, column = 2)
+    text5.grid(row = 6, column = 8)
 
     text6 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text6.grid(row = 6, column = 3)
+    text6.grid(row = 6, column = 9)
 
     text7 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text7.grid(row = 6, column = 4)
+    text7.grid(row = 6, column = 10)
 
     text8 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text8.grid(row = 6, column = 5)
+    text8.grid(row = 6, column = 11)
 
     text9 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text9.grid(row = 6, column = 6)
+    text9.grid(row = 6, column = 12)
 
     text10 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text10.grid(row = 6, column = 7)
+    text10.grid(row = 6, column = 13)
 
     text11 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text11.grid(row = 8, column = 1)
+    text11.grid(row = 8, column = 7)
 
     text12 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text12.grid(row = 8, column = 2)
+    text12.grid(row = 8, column = 8)
 
     text13 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text13.grid(row = 8, column = 3)
+    text13.grid(row = 8, column = 9)
 
     text14 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text14.grid(row = 8, column = 4)
+    text14.grid(row = 8, column = 10)
 
     text15 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text15.grid(row = 8, column = 5)
+    text15.grid(row = 8, column = 11)
 
     text16 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text16.grid(row = 8, column = 6)
+    text16.grid(row = 8, column = 12)
 
     text17 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text17.grid(row = 8, column = 7)
+    text17.grid(row = 8, column = 13)
 
     text18 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text18.grid(row = 10, column = 1)
+    text18.grid(row = 10, column = 7)
 
     text19 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text19.grid(row = 10, column = 2)
+    text19.grid(row = 10, column = 8)
 
     text20 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text20.grid(row = 10, column = 3)
+    text20.grid(row = 10, column = 9)
 
     text21 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text21.grid(row = 10, column = 4)
+    text21.grid(row = 10, column = 10)
 
     text22 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text22.grid(row = 10, column = 5)
+    text22.grid(row = 10, column = 11)
 
     text23 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text23.grid(row = 10, column = 6)
+    text23.grid(row = 10, column = 12)
 
     text24 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text24.grid(row = 10, column = 7)
+    text24.grid(row = 10, column = 13)
 
     text25 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text25.grid(row = 12, column = 1)
+    text25.grid(row = 12, column = 7)
 
     text26 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text26.grid(row = 12, column = 2)
+    text26.grid(row = 12, column = 8)
 
     text27 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text27.grid(row = 12, column = 3)
+    text27.grid(row = 12, column = 9)
 
     text28 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text28.grid(row = 12, column = 4)
+    text28.grid(row = 12, column = 10)
 
     text29 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text29.grid(row = 12, column = 5)
+    text29.grid(row = 12, column = 11)
 
     text30 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
-    text30.grid(row = 12, column = 6)
+    text30.grid(row = 12, column = 12)
 
     homeBtn = tk.Button(ice_calendar, text = "Return to Home Page", command = goHome)
-    homeBtn.grid(row = 13, column = 3, columnspan = 3)
+    homeBtn.grid(row = 13, column = 9, columnspan = 3)
+
 
     # Bind it so that should a user double click into the text box, it opens an event sign up window
     text1.bind("<Double-Button-1>", SignUp)
