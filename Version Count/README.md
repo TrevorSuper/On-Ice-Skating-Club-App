@@ -35,8 +35,11 @@ v0.00.0010<br>
 v0.00.0011<br>
 -Users can now "Sign Out"<br>
 <br>
-v0.00.0012
+v0.00.0012<br>
 -Users will now be redirected back to the open skate registration after being prompted and redirected to sign in to an account<br>
 <br>
 v0.00.0013<br>
--Moved Sign Out button to the homepage as there is nothing else in my_account.py right now
+-Moved Sign Out button to the homepage as there is nothing else in my_account.py right now<br>
+<br>
+v0.00.0014<br>
+-Open Skate Reservation System Prototype
