@@ -192,7 +192,6 @@ def open_rinkA_window():
     time_300_330_PM = Checkbutton(rinkA_window,text='3:00PM-3:30PM',font=('Arial',12),variable=var_300_330,onvalue=1,offvalue=0).grid(row=4,column=13,columnspan=2)
     time_330_400_PM = Checkbutton(rinkA_window,text='3:30PM-4:00PM',font=('Arial',12),variable=var_330_400,onvalue=1,offvalue=0).grid(row=4,column=15,columnspan=2)
     reserve_openskate_time_button = Button(rinkA_window,text='Reserve Skate Time',font=('Arial',12),command=attempt_reserve_openskate_time).grid(row=6,column=8,columnspan=2)
-    rinkA_window.mainloop()
 
 def open_rinkB_window():
     rinkB_window = Tk()
