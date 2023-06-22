@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
 import datetime
-import re
 import pymysql
 import home_page
 import login_page
