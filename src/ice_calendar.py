@@ -181,94 +181,94 @@ def open_ice_calendar_logged_in():
     lbl30.grid(row = 11, column = 12)
 
     # Editable text boxes to place the events into
-    text1 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text1 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text1.grid(row = 4, column = 11)
 
-    text2 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text2 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text2.grid(row = 4, column = 12)
 
-    text3 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text3 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text3.grid(row = 4, column = 13)
 
-    text4 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text4 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text4.grid(row = 6, column = 7)
 
-    text5 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text5 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text5.grid(row = 6, column = 8)
 
-    text6 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text6 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text6.grid(row = 6, column = 9)
 
-    text7 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text7 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text7.grid(row = 6, column = 10)
 
-    text8 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text8 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text8.grid(row = 6, column = 11)
 
-    text9 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text9 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text9.grid(row = 6, column = 12)
 
-    text10 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text10 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text10.grid(row = 6, column = 13)
 
-    text11 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text11 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text11.grid(row = 8, column = 7)
 
-    text12 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text12 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text12.grid(row = 8, column = 8)
 
-    text13 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text13 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text13.grid(row = 8, column = 9)
 
-    text14 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text14 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text14.grid(row = 8, column = 10)
 
-    text15 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text15 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text15.grid(row = 8, column = 11)
 
-    text16 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text16 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text16.grid(row = 8, column = 12)
 
-    text17 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text17 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text17.grid(row = 8, column = 13)
 
-    text18 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text18 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text18.grid(row = 10, column = 7)
 
-    text19 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text19 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text19.grid(row = 10, column = 8)
 
-    text20 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text20 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text20.grid(row = 10, column = 9)
 
-    text21 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text21 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text21.grid(row = 10, column = 10)
 
-    text22 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text22 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text22.grid(row = 10, column = 11)
 
-    text23 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text23 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text23.grid(row = 10, column = 12)
 
-    text24 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text24 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text24.grid(row = 10, column = 13)
 
-    text25 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text25 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text25.grid(row = 12, column = 7)
 
-    text26 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text26 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text26.grid(row = 12, column = 8)
 
-    text27 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text27 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text27.grid(row = 12, column = 9)
 
-    text28 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text28 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text28.grid(row = 12, column = 10)
 
-    text29 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text29 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text29.grid(row = 12, column = 11)
 
-    text30 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text30 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text30.grid(row = 12, column = 12)
 
     homeBtn = tk.Button(ice_calendar, text = "Return to Home Page", command = goHome)
@@ -316,14 +316,19 @@ def open_ice_calendar_not_logged_in():
 
     # Open a new window to sign up for the event
     def SignUp(event):
+        #messagebox.showerror('Error','You must be logged in to an account to register for an event.')
+        #signUpWindow.destroy()
+        #ice_calendar.destroy()
+        #login_page.user_login()
+
         signUpWindow = tk.Toplevel()
         signUpWindow.title("Sign Up For Event ?")
         signUpWindow.config(width = 300, height = 200)
         
-        messagebox.showerror('Error','You must be logged in to an account to register for an event.')
-        signUpWindow.destroy()
-        ice_calendar.destroy()
-        login_page.user_login()
+        check = event.widget
+        test = tk.Label(signUpWindow, text = check)
+        test.grid(row=1,column=1)
+        
 
 
     ice_calendar = tk.Tk()
@@ -474,94 +479,94 @@ def open_ice_calendar_not_logged_in():
     lbl30.grid(row = 11, column = 12)
 
     # Editable text boxes to place the events into
-    text1 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text1 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text1.grid(row = 4, column = 11)
 
-    text2 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text2 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text2.grid(row = 4, column = 12)
 
-    text3 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text3 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text3.grid(row = 4, column = 13)
 
-    text4 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text4 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text4.grid(row = 6, column = 7)
 
-    text5 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text5 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text5.grid(row = 6, column = 8)
 
-    text6 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text6 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text6.grid(row = 6, column = 9)
 
-    text7 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text7 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text7.grid(row = 6, column = 10)
 
-    text8 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text8 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text8.grid(row = 6, column = 11)
 
-    text9 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text9 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text9.grid(row = 6, column = 12)
 
-    text10 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text10 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text10.grid(row = 6, column = 13)
 
-    text11 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text11 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text11.grid(row = 8, column = 7)
 
-    text12 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text12 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text12.grid(row = 8, column = 8)
 
-    text13 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text13 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text13.grid(row = 8, column = 9)
 
-    text14 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text14 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text14.grid(row = 8, column = 10)
 
-    text15 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text15 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text15.grid(row = 8, column = 11)
 
-    text16 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text16 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text16.grid(row = 8, column = 12)
 
-    text17 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text17 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text17.grid(row = 8, column = 13)
 
-    text18 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text18 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text18.grid(row = 10, column = 7)
 
-    text19 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text19 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text19.grid(row = 10, column = 8)
 
-    text20 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text20 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text20.grid(row = 10, column = 9)
 
-    text21 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text21 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text21.grid(row = 10, column = 10)
 
-    text22 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text22 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text22.grid(row = 10, column = 11)
 
-    text23 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text23 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text23.grid(row = 10, column = 12)
 
-    text24 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text24 = tk.Label(ice_calendar, text = "18+ Drop In 9:00am - 10:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text24.grid(row = 10, column = 13)
 
-    text25 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text25 = tk.Label(ice_calendar, text = "Free Skate 2:30pm - 3:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text25.grid(row = 12, column = 7)
 
-    text26 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text26 = tk.Label(ice_calendar, text = "Free Skate 8:00am - 9:00am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text26.grid(row = 12, column = 8)
 
-    text27 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text27 = tk.Label(ice_calendar, text = "Hockey Game 7:00am - 8:30am", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text27.grid(row = 12, column = 9)
 
-    text28 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text28 = tk.Label(ice_calendar, text = "Hockey Game 6:00pm - 7:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text28.grid(row = 12, column = 10)
 
-    text29 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text29 = tk.Label(ice_calendar, text = "Free Skate 12:00pm - 1:00pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text29.grid(row = 12, column = 11)
 
-    text30 = tk.Text(ice_calendar, height = 5, width = 10, state = 'disabled')
+    text30 = tk.Label(ice_calendar, text = "Hockey Game 12:00pm - 1:30pm", wraplength = 75, justify = LEFT, height = 5, width = 10, bg = "white", relief = "groove", borderwidth = 1)
     text30.grid(row = 12, column = 12)
 
     homeBtn = tk.Button(ice_calendar, text = "Return to Home Page", command = goHome)
