@@ -15,26 +15,33 @@ def open_ice_calendar_logged_in():
     # Open a new window to sign up for the event
     def SignUp(event,checkNum):
         signUpWindow = tk.Toplevel()
-        signUpWindow.title("Sign Up For Event ?")
-        signUpWindow.config(width = 300, height = 200)
+        signUpWindow.title("Register Event")
         
+        w = 225
+        h = 100
+        screen_width = signUpWindow.winfo_screenwidth()
+        screen_height = signUpWindow.winfo_screenheight()
+        x = (screen_width / 2) - (w / 2)
+        y = (screen_height / 2) - (h / 2)
+        signUpWindow.geometry('%dx%d+%d+%d' % (w, h, x, y))
+
+
         day = datetime.date.today().day
         
         if day < int(checkNum):
-            query = tk.Label(signUpWindow, text = "Would you like to sign up for this event?").grid(row = 1, column = 1)
+            query = tk.Label(signUpWindow, text = "Would you like to sign up for this event?").grid(row = 1, column = 1, columnspan = 2)
 
-            buttonCancel = tk.Button(signUpWindow, text = "Cancel", command = signUpWindow.destroy)
+            buttonCancel = tk.Button(signUpWindow, text = "No Thanks", command = signUpWindow.destroy)
 
             buttonSignUp = tk.Button(signUpWindow, text = "Yes",
-            # Temp code, Proceede to add the event to a list ?
+            # Temp code, Proceede to add the event to a database: command = addToDatabase(checkNum)) ?
             command = signUpWindow.destroy)
 
-            buttonCancel.grid(row = 10, column = 10)
-            buttonSignUp.grid(row = 10, column = 11)
+            buttonSignUp.grid(row = 2, column = 1)
+            buttonCancel.grid(row = 2, column = 2)
         else:
             messagebox.showerror('Error','It is too late to sign up for that event.')
             signUpWindow.destroy()
-
 
 
     ice_calendar = tk.Tk()
