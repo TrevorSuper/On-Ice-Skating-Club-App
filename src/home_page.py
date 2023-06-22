@@ -7,7 +7,7 @@ from tkinter import *
 def open_home_screen_without_user_logged_in():
     home_window = Tk()
     home_window.geometry("1920x1080")
-    home_window.title("On Ice Skating v0.00.0013")
+    home_window.title("On Ice Skating v0.00.0014")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     home_window.iconphoto(True, ShoeIcon)
     def open_user_login():
@@ -42,7 +42,7 @@ def open_home_screen_without_user_logged_in():
 def open_home_screen_with_user_logged_in():
     logged_window = Tk()
     logged_window.geometry("1920x1080")
-    logged_window.title("On Ice Skating v0.00.0013")
+    logged_window.title("On Ice Skating v0.00.0014")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     logged_window.iconphoto(True, ShoeIcon)
     empty_grid = Label(logged_window,height=1,width=21).grid(row=0,column=0)

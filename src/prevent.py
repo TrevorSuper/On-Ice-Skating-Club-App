@@ -1,4 +1,6 @@
 from datetime import datetime
+import tkinter as tk
+from tkinter import messagebox
 
 class Event:
     def __init__(self, event_id, capacity, date, status):
@@ -7,6 +9,12 @@ class Event:
         self.date = date
         self.status = status
         self.registrations = []
+
+    def display_message(self, message):
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showinfo("Registration Status", message)
+        root.destroy()
 
     def is_full(self):
         return len(self.registrations) >= self.capacity
@@ -19,19 +27,17 @@ class Event:
 
     def register_user(self, user):
         if self.is_canceled():
-            return "Event has been canceled. Registration failed."
+            self.display_message("Event has been canceled. Registration failed.")
         elif self.is_expired():
-            return "Event has already expired. Registration failed."
+            self.display_message("Event has already expired. Registration failed.")
         elif self.is_full():
-            return "Event is already full. Registration failed."
+            self.display_message("Event is already full. Registration failed.")
         else:
             self.registrations.append(user)
-            return "Registration Unsuccessful Due to the Event already EXPIRED, FULL, or CANCELLED!"
+            self.display_message("Registration successful!")
 
 # Usage example
 event = Event(event_id=1, capacity=50, date=datetime(2023, 7, 1), status="active")
-user = "John Doe"  # Assuming you have a User class or simply using a string for demonstration
+user = "John Doe"  
 
-registration_result = event.register_user(user)
-print(registration_result)
-
+event.register_user(user)
