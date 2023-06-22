@@ -4,6 +4,5 @@ import openskate
 # The entire program starts with this file, do not abandon main.py
 # when testing run it from here
 def main():
-    #openskate.open_rinkA_window()
     home_page.open_home_screen_without_user_logged_in()
 main()

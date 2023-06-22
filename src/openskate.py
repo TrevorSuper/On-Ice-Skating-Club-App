@@ -63,36 +63,36 @@ def open_rinkA_window():
     rinkA_window.title("Rink A Open Skate Schedule")
     ShoeIcon = PhotoImage(file='src\img\Skating_Shoe_Icon.png')
     rinkA_window.iconphoto(True, ShoeIcon)
-    empty_grid = Label(rinkA_window,height=1,width=13,background='green',text='0').grid(row=0,column=0)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='1').grid(row=0,column=1)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='2').grid(row=0,column=2)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='3').grid(row=0,column=3)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='4').grid(row=0,column=4)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='5').grid(row=0,column=5)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='6').grid(row=0,column=6)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='7').grid(row=0,column=7)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='8').grid(row=0,column=8)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='9').grid(row=0,column=9)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='10').grid(row=0,column=10)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='11').grid(row=0,column=11)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='12').grid(row=0,column=12)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='13').grid(row=0,column=13)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='14').grid(row=0,column=14)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='15').grid(row=0,column=15)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='green',text='16').grid(row=0,column=16)
-    empty_grid = Label(rinkA_window,height=1,width=11,background='red',text='17').grid(row=0,column=17)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='1').grid(row=1,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='2').grid(row=2,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='3').grid(row=3,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='4').grid(row=4,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='5').grid(row=5,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='6').grid(row=6,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='7').grid(row=7,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='8').grid(row=8,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='9').grid(row=9,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='10').grid(row=10,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='red',text='11').grid(row=11,column=0)
-    empty_grid = Label(rinkA_window,height=3,width=13,background='green',text='12').grid(row=12,column=0)
+    empty_grid = Label(rinkA_window,height=1,width=13).grid(row=0,column=0)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=1)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=2)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=3)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=4)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=5)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=6)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=7)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=8)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=9)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=10)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=11)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=12)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=13)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=14)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=15)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=16)
+    empty_grid = Label(rinkA_window,height=1,width=11).grid(row=0,column=17)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=1,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=2,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=3,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=4,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=5,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=6,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=7,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=8,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=9,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=10,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=11,column=0)
+    empty_grid = Label(rinkA_window,height=3,width=13).grid(row=12,column=0)
     def rinkA_to_openskate_with_login():
         rinkA_window.destroy()
         open_openskate_window_with_log_in()
@@ -100,38 +100,64 @@ def open_rinkA_window():
     rinkA_title = Label(rinkA_window,text='Reserve your skating time in chunks of 30 minutes',font=('Arial Bold',16)).grid(row=1,column=4,columnspan=10)
     rinkA_date = Label(rinkA_window,text='Friday June 23, 2023',font=('Arial',15)).grid(row=2,column=4,columnspan=10)
     def attempt_reserve_openskate_time():
-        if(var_800_830.get()==1):
-            print('You Registered for 8:00AM-8:30AM')
-        if(var_830_900.get()==1):
-            print('You Registered for 8:30AM-9:00AM')
-        if(var_900_930.get()==1):
-            print('You Registered for 9:00AM-9:30AM')
-        if(var_930_1000.get()==1):
-            print('You Registered for 9:30AM-10:00AM')
-        if(var_1000_1030.get()==1):
-            print('You Registered for 10:00AM-10:30AM')
-        if(var_1030_1100.get()==1):
-            print('You Registered for 10:30AM-11:00AM')
-        if(var_1100_1130.get()==1):
-            print('You Registered for 11:00AM-11:30AM')
-        if(var_1130_1200.get()==1):
-            print('You Registered for 11:30AM-12:00PM')
-        if(var_1200_1230.get()==1):
-            print('You Registered for 12:00PM-12:30PM')
-        if(var_1230_100.get()==1):
-            print('You Registered for 12:30PM-1:00PM')
-        if(var_100_130.get()==1):
-            print('You Registered for 1:00PM-1:30PM')
-        if(var_130_200.get()==1):
-            print('You Registered for 1:30PM-2:00PM')
-        if(var_200_230.get()==1):
-            print('You Registered for 2:00PM-2:30PM')
-        if(var_230_300.get()==1):
-            print('You Registered for 2:30PM-3:00PM')
-        if(var_300_330.get()==1):
-            print('You Registered for 3:00PM-3:30PM')
-        if(var_330_400.get()==1):
-            print('You Registered for 3:30PM-4:00PM')
+        if(var_800_830.get()==0 and var_830_900.get()==0 and var_900_930.get()==0 and var_930_1000.get()==0 and var_1000_1030.get()==0 and var_1030_1100.get()==0 and var_1100_1130.get()==0 and var_1130_1200.get()==0 and var_1200_1230.get()==0 and var_1230_100.get()==0 and var_100_130.get()==0 and var_130_200.get()==0 and var_200_230.get()==0 and var_230_300.get()==0 and var_300_330.get()==0 and var_330_400.get()==0):
+            messagebox.showerror('Error','Select a time slot')
+        else:
+            try:
+                con=pymysql.connect(host='localhost',user='root',password='legacyserverwhen')
+                mycursor=con.cursor()
+                print('connection established')
+            except:
+                messagebox.showerror('Error','Unable To Connect To Database')
+                return
+            try:
+                query='create database open_test_one'
+                mycursor.execute(query)
+                print('database created')
+                query='use open_test_one'
+                mycursor.execute(query)
+                print('database selected')
+                query='create table open_table_one(number_of_open_skaters_800_830 INT,number_of_open_skaters_830_900 INT,number_of_open_skaters_900_930 INT,number_of_open_skaters_930_1000 INT,number_of_open_skaters_1000_1030 INT,number_of_open_skaters_1030_1100 INT,number_of_open_skaters_1100_1130 INT,number_of_open_skaters_1130_1200 INT,number_of_open_skaters_1200_1230 INT,number_of_open_skaters_1230_100 INT,number_of_open_skaters_100_130 INT,number_of_open_skaters_130_200 INT,number_of_open_skaters_200_230 INT,number_of_open_skaters_230_300 INT,number_of_open_skaters_300_330 INT,number_of_open_skaters_330_400 INT)'
+                mycursor.execute(query)
+                print('table created')
+            except:
+                mycursor.execute('use open_test_one')
+                print('database already created, using exsiting database instead')
+            query='insert into open_table_one(number_of_open_skaters_800_830,number_of_open_skaters_830_900,number_of_open_skaters_900_930,number_of_open_skaters_930_1000,number_of_open_skaters_1000_1030,number_of_open_skaters_1030_1100,number_of_open_skaters_1100_1130,number_of_open_skaters_1130_1200,number_of_open_skaters_1200_1230,number_of_open_skaters_1230_100,number_of_open_skaters_100_130,number_of_open_skaters_130_200,number_of_open_skaters_200_230,number_of_open_skaters_230_300,number_of_open_skaters_300_330,number_of_open_skaters_330_400) values(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)'
+            mycursor.execute(query)
+            print('inserting into database')
+            if(var_800_830.get()==1):
+                messagebox.showinfo('Success','You Registered for 8:00AM-8:30AM')
+            if(var_830_900.get()==1):
+                messagebox.showinfo('Success','You Registered for 8:30AM-9:00AM')
+            if(var_900_930.get()==1):
+                messagebox.showinfo('Success','You Registered for 9:00AM-9:30AM')
+            if(var_930_1000.get()==1):
+                messagebox.showinfo('Success','You Registered for 9:30AM-10:00AM')
+            if(var_1000_1030.get()==1):
+                messagebox.showinfo('Success','You Registered for 10:00AM-10:30AM')
+            if(var_1030_1100.get()==1):
+                messagebox.showinfo('Success','You Registered for 10:30AM-11:00AM')
+            if(var_1100_1130.get()==1):
+                messagebox.showinfo('Success','You Registered for 11:00AM-11:30AM')
+            if(var_1130_1200.get()==1):
+                messagebox.showinfo('Success','You Registered for 11:30AM-12:00PM')
+            if(var_1200_1230.get()==1):
+                messagebox.showinfo('Success','You Registered for 12:00PM-12:30PM')
+            if(var_1230_100.get()==1):
+                messagebox.showinfo('Success','You Registered for 12:30PM-1:00PM')
+            if(var_100_130.get()==1):
+                messagebox.showinfo('Success','You Registered for 1:00PM-1:30PM')
+            if(var_130_200.get()==1):
+                messagebox.showinfo('Success','You Registered for 1:30PM-2:00PM')
+            if(var_200_230.get()==1):
+                messagebox.showinfo('Success','You Registered for 2:00PM-2:30PM')
+            if(var_230_300.get()==1):
+                messagebox.showinfo('Success','You Registered for 2:30PM-3:00PM')
+            if(var_300_330.get()==1):
+                messagebox.showinfo('Success','You Registered for 3:00PM-3:30PM')
+            if(var_330_400.get()==1):
+                messagebox.showinfo('Success','You Registered for 3:30PM-4:00PM')
 
     var_800_830 = IntVar()
     var_830_900 = IntVar()
