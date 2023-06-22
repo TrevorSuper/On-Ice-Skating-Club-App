@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
+import datetime
+import re
 import pymysql
 import home_page
 import login_page
@@ -12,25 +14,28 @@ def open_ice_calendar_logged_in():
         home_page.open_home_screen_with_user_logged_in()
 
     # Open a new window to sign up for the event
-    def SignUp(event):
+    def SignUp(event,checkNum):
         signUpWindow = tk.Toplevel()
         signUpWindow.title("Sign Up For Event ?")
         signUpWindow.config(width = 300, height = 200)
         
+        day = datetime.date.today().day
+        
+        if day < int(checkNum):
+            query = tk.Label(signUpWindow, text = "Would you like to sign up for this event?").grid(row = 1, column = 1)
 
-        query = tk.Label(signUpWindow,
-            # Temp text, find out a way to include the actual event in the lable
-            # ie. "Would you like to sign up for " + event + "?"
-            text = "Would you like to sign up for this event?").grid(row = 1, column = 1)
+            buttonCancel = tk.Button(signUpWindow, text = "Cancel", command = signUpWindow.destroy)
 
-        buttonCancel = tk.Button(signUpWindow, text = "Cancel", command = signUpWindow.destroy)
-
-        buttonSignUp = tk.Button(signUpWindow, text = "Yes",
+            buttonSignUp = tk.Button(signUpWindow, text = "Yes",
             # Temp code, Proceede to add the event to a list ?
             command = signUpWindow.destroy)
 
-        buttonCancel.grid(row = 10, column = 10)
-        buttonSignUp.grid(row = 10, column = 11)
+            buttonCancel.grid(row = 10, column = 10)
+            buttonSignUp.grid(row = 10, column = 11)
+        else:
+            messagebox.showerror('Error','It is too late to sign up for that event.')
+            signUpWindow.destroy()
+
 
 
     ice_calendar = tk.Tk()
@@ -276,36 +281,37 @@ def open_ice_calendar_logged_in():
 
 
     # Bind it so that should a user double click into the text box, it opens an event sign up window
-    text1.bind("<Double-Button-1>", SignUp)
-    text2.bind('<Double-Button-1>', SignUp)
-    text3.bind('<Double-Button-1>', SignUp)
-    text4.bind('<Double-Button-1>', SignUp)
-    text5.bind('<Double-Button-1>', SignUp)
-    text6.bind('<Double-Button-1>', SignUp)
-    text7.bind('<Double-Button-1>', SignUp)
-    text8.bind('<Double-Button-1>', SignUp)
-    text9.bind('<Double-Button-1>', SignUp)
-    text10.bind('<Double-Button-1>', SignUp)
-    text11.bind('<Double-Button-1>', SignUp)
-    text12.bind('<Double-Button-1>', SignUp)
-    text13.bind('<Double-Button-1>', SignUp)
-    text14.bind('<Double-Button-1>', SignUp)
-    text15.bind('<Double-Button-1>', SignUp)
-    text16.bind('<Double-Button-1>', SignUp)
-    text17.bind('<Double-Button-1>', SignUp)
-    text18.bind('<Double-Button-1>', SignUp)
-    text19.bind('<Double-Button-1>', SignUp)
-    text20.bind('<Double-Button-1>', SignUp)
-    text21.bind('<Double-Button-1>', SignUp)
-    text22.bind('<Double-Button-1>', SignUp)
-    text23.bind('<Double-Button-1>', SignUp)
-    text24.bind('<Double-Button-1>', SignUp)
-    text25.bind('<Double-Button-1>', SignUp)
-    text26.bind('<Double-Button-1>', SignUp)
-    text27.bind('<Double-Button-1>', SignUp)
-    text28.bind('<Double-Button-1>', SignUp)
-    text29.bind('<Double-Button-1>', SignUp)
-    text30.bind('<Double-Button-1>', SignUp)
+    text1.bind("<Double-Button-1>", lambda event: SignUp(event, "1"))
+    text2.bind('<Double-Button-1>', lambda event: SignUp(event, "2"))
+    text3.bind('<Double-Button-1>', lambda event: SignUp(event, "3"))
+    text4.bind('<Double-Button-1>', lambda event: SignUp(event, "4"))
+    text5.bind('<Double-Button-1>', lambda event: SignUp(event, "5"))
+    text6.bind('<Double-Button-1>', lambda event: SignUp(event, "6"))
+    text7.bind('<Double-Button-1>', lambda event: SignUp(event, "7"))
+    text8.bind('<Double-Button-1>', lambda event: SignUp(event, "8"))
+    text9.bind('<Double-Button-1>', lambda event: SignUp(event, "9"))
+    text10.bind('<Double-Button-1>', lambda event: SignUp(event, "10"))
+    text11.bind('<Double-Button-1>', lambda event: SignUp(event, "11"))
+    text12.bind('<Double-Button-1>', lambda event: SignUp(event, "12"))
+    text13.bind('<Double-Button-1>', lambda event: SignUp(event, "13"))
+    text14.bind('<Double-Button-1>', lambda event: SignUp(event, "14"))
+    text15.bind('<Double-Button-1>', lambda event: SignUp(event, "15"))
+    text16.bind('<Double-Button-1>', lambda event: SignUp(event, "16"))
+    text17.bind('<Double-Button-1>', lambda event: SignUp(event, "17"))
+    text18.bind('<Double-Button-1>', lambda event: SignUp(event, "18"))
+    text19.bind('<Double-Button-1>', lambda event: SignUp(event, "19"))
+    text20.bind('<Double-Button-1>', lambda event: SignUp(event, "20"))
+    text21.bind('<Double-Button-1>', lambda event: SignUp(event, "21"))
+    text22.bind('<Double-Button-1>', lambda event: SignUp(event, "22"))
+    text23.bind('<Double-Button-1>', lambda event: SignUp(event, "23"))
+    text24.bind('<Double-Button-1>', lambda event: SignUp(event, "24"))
+    text25.bind('<Double-Button-1>', lambda event: SignUp(event, "25"))
+    text26.bind('<Double-Button-1>', lambda event: SignUp(event, "26"))
+    text27.bind('<Double-Button-1>', lambda event: SignUp(event, "27"))
+    text28.bind('<Double-Button-1>', lambda event: SignUp(event, "28"))
+    text29.bind('<Double-Button-1>', lambda event: SignUp(event, "29"))
+    text30.bind('<Double-Button-1>', lambda event: SignUp(event, "30"))
+   
 
 def open_ice_calendar_not_logged_in():
     
@@ -316,20 +322,9 @@ def open_ice_calendar_not_logged_in():
 
     # Open a new window to sign up for the event
     def SignUp(event):
-        #messagebox.showerror('Error','You must be logged in to an account to register for an event.')
-        #signUpWindow.destroy()
-        #ice_calendar.destroy()
-        #login_page.user_login()
-
-        signUpWindow = tk.Toplevel()
-        signUpWindow.title("Sign Up For Event ?")
-        signUpWindow.config(width = 300, height = 200)
-        
-        check = event.widget
-        test = tk.Label(signUpWindow, text = check)
-        test.grid(row=1,column=1)
-        
-
+        messagebox.showerror('Error','You must be logged in to an account to register for an event.')
+        ice_calendar.destroy()
+        login_page.user_login()
 
     ice_calendar = tk.Tk()
     ice_calendar.title("Calendar")
