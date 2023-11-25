@@ -1,5 +1,6 @@
 # On Ice Skating Club App
-DO NOT UPDATE MAIN BRANCH. Commit any and all changes to post-progress branch.<br>
+<br>
+CSI 2999 Sophomore Project<br>
 System Features:<br>
 1. User Account Management<br>
    -Allow new users to create an account<br>
